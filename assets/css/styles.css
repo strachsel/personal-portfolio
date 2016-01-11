@@ -1,0 +1,30 @@
+body {
+    background-color: #d0d0d0;
+}
+
+.heading {
+    font-family: 'Open Sans Condensed', sans-serif; 
+    font-size: 32px;
+    color: black;
+    
+}
+
+.subheading {
+    font-family: 'Open Sans Condensed', sans-serif; 
+    font-size: 18px;
+    
+}
+
+.about-me {
+    font-family: 'Open Sans Condensed', sans-serif; 
+    font-size: 15px;
+    font-style: normal;
+    margin: 10% auto;
+    width: 1000px;
+    
+}
+
+.arrow {
+    
+    
+}
