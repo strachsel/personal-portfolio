@@ -1,30 +1,85 @@
+
+
+/*
+ * web fonts
+ */
+
+
+
+/*
+ * base styles
+ */
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+html {
+	background-color: #bdbdbd;
+	color: #fff;
+	font: normal 1em/1.5 Clavo, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", serif;
+	text-align: center;
+}
+
 body {
-    background-color: #d0d0d0;
+	margin: 100px;
 }
 
-.heading {
-    font-family: 'Open Sans Condensed', sans-serif; 
-    font-size: 32px;
-    color: black;
-    
+h1,
+h2 {
+	font-size: 1.5rem;
+	font-style: italic;
+	position: relative;
 }
 
-.subheading {
-    font-family: 'Open Sans Condensed', sans-serif; 
-    font-size: 18px;
-    
+h1 {
+	margin: 0;
 }
+
+h2 {
+	line-height: 1.25;
+	margin: 0;
+}
+
+
+.container {
+	margin: 0 auto;
+	max-width: 37.5rem;
+	padding: 7.5rem 1.25rem;
+}
+
+/* navigation */
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* about me */
 
 .about-me {
-    font-family: 'Open Sans Condensed', sans-serif; 
-    font-size: 15px;
-    font-style: normal;
-    margin: 10% auto;
-    width: 1000px;
-    
+	position: relative;
+	z-index: 4;
 }
 
-.arrow {
-    
-    
+.headline {
+	margin-bottom: 5rem;
+	position: relative;
 }
+.headline:after {
+	background-color: #fff;
+	bottom: -2.5rem;
+	content: "";
+	height: 1px;
+	left: 50%;
+	margin-left: -1.25rem;
+	position: absolute;
+	width: 2.5rem;
+}
+
+
+/* connect */
