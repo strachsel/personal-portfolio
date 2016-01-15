@@ -10,6 +10,9 @@ function PortfolioItem(opts) {
 PortfolioItem.prototype.toHTML = function() {
   var $temp = $('#template #portfolioItems').clone();
   $temp.find('#title').html(this.title);
+  $temp.find('#description').html(this.description);
+  $temp.find('#publishedOn').html(this.publishedOn);
+  $temp.find('#category').html(this.category);
   $temp.find('img').attr('src', this.img);
 
   $('#portfolioItemsContainer').append($temp);
