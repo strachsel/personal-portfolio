@@ -3,7 +3,6 @@
     <head>
         <meta charset="utf-8" />
         <title>Sonya Trachsel - Front-End Developer</title>
-        <link rel="stylesheet" href="assets/styles/normalize.css">
         <link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
         <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'> <!--Open Sans Condensed font-->
     </head>
@@ -40,26 +39,50 @@
         </div> <!--Arrow class closing tag-->
 
 
+
+        <section id="portfolio" class="tab-content">
+            <div>
+              <ul id="filters">
+                <li>
+                  <select id="date-filter">
+                    <option value="">-- Filter by Date --</option>
+                  </select>
+                </li>
+                <li>
+                  <select id="category-filter">
+                    <option value="">-- Filter by Categories --</option>
+                  </select>
+                </li>
+              </ul>
+            </div> <!--Filters closing tag-->
+
+
+            <div id="template" style="display: none">
+              <section id="portfolioItems">
+               <article class="template" data-category="cat">
+                 <header>
+                   <h1 id="title">Project Name</h1>
+                   <p id="category">Project category</p>
+                   <div id="publishedOn">
+                     created <time pubdate datetime="2000-01-01">Publish Date</time>
+                   </div>
+                 </header>
+                 <section class="article-body">
+                   <p id="description">Project Description</p>
+                   <img id="portfolioImage" src=""></img>
+                 </section>
+               </article>
+              </section>
+            </div>
+
             <!--DONE portfolio items displayed with a repeatable template-->
             <!--TODO show the newest projects on top-->
-    <section id="portfolio-list">
-          <div class="portfolio-item" data-cat="logo">
-            <div class="portfolio-wrapper">
-                <img src=".jpg" alt="" />
-                <div class="label">
-                    <div class="label-text">
-                        <a class="text-title">First Portfolio Item</a>
-                        <span class="text-category">Front-End</span>
-                        <div class="byline">
-      <!--DONE relative timestamps on projects of how many days ago something was created-->
-                        created <time pubdate datetime="2000-01-01">Publish Time</time>
-                        </div>
-                    </div>
-                    <div class="label-bg"></div>
-                </div>
-            </div>
-        </div>
-</section>
+            <div id="portfolioItemsContainer">
+
+           </div>
+       </section> <!--Portfolio section closing tag-->
+
+
 
 
          <div class="about-me">
@@ -85,9 +108,10 @@
           <p id="copyright">&copy; Sonya Trachsel 2016</p>
         </footer>
 
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-        <script src="assets/js/jquery.quicksand.js"></script>
-        <script src="assets/js/script.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="./assets/js/portfolioItems.js"></script>
+        <script src="./assets/js/script.js"></script>
+
 
     </body>
 </html>
