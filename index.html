@@ -1,35 +1,28 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>Sonya Trachsel - Front-End Developer</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Sonya Trachsel - Front-End Developer</title>
-        <link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
-        <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'> <!--Open Sans Condensed font-->
-    </head>
-
+        <link rel="stylesheet" type="text/css" href="css/styles.css" />
+   </head>
     <body>
-    <div class="container">
+      <div class="container">
         <div class="headline">
-                <h1> I'm <strong>Sonya Trachsel</strong>. Front-End Developer, based in Portand, OR.
-                </h1>
+            <h1> I'm <strong>Sonya Trachsel</strong>. Front-End Developer, based in Portand, OR.</h1>
         </div> <!--Headline class closing tag-->
 
-
-        <nav id="container">
-            <ul class="nav">
-                <li class="button">
-                    <a href="#portfolio" data-ga-event>Selected Work</a>
-                </li>
-                <li class="button">
-                    <a href="#about-me" data-ga-event>About me</a>
-                </li>
-                <li class="button">
-                    <a href="#connect" data-ga-event>Connect</a>
-                </li>
-            </ul>
-        </div> <!--Navigation class closing tag-->
-        </nav> <!--Container class closing tag-->
+        <nav id="container" role="navigation">
+          <span class="icn-toggle">
+            <b class="srt">Toggle</b>
+          </span>
+          <ul class="nav">
+              <li class="button"><a href="#portfolio" data-ga-event>Selected Work</a></li>
+              <li class="button"><a href="#about-me" data-ga-event>About me</a></li>
+              <li class="button"><a href="#connect" data-ga-event>Connect</a></li>
+          </ul>
+        </nav> <!--Navigation class closing tag-->
+      </div> <!--Container class closing tag-->
 
 
         <div a href="#portfolio" class="arrow bounce">
@@ -99,6 +92,20 @@
             <a href="http://twitter.com"><img src="img/twitter.png" alt="Twitter Logo" class="social-icon"></a>
             <a href="http://linkedin.com"><img src="img/linkedin.png" alt="Linkedin Logo" class="social-icon"></a>
           </div> <!--Connect-social closing tag-->
+          <h4>Form Elements</h4>
+            <form>
+              <label class="form__label--hidden" for="name">Name:</label>
+              <input class="form__input" type="text" id="name" placeholder="Name">
+
+              <label class="form__label--hidden" for="email">Email:</label>
+              <input class="form__input" type="email" id="email" placeholder="email@website.com">
+
+              <label class="form__label--hidden" for="msg">Message:</label>
+              <textarea class="form__input" id="msg" placeholder="Message..." rows="6"></textarea>
+
+              <input class="btn--default" type="submit" value="Submit">
+              <input class="btn--warning" type="reset" value="Reset">
+            </form>
           </div> <!--Container closing tag-->
         </section>
 
@@ -107,8 +114,8 @@
         </footer>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-        <script src="./assets/js/portfolioItems.js"></script>
-        <script src="./assets/js/script.js"></script>
+        <script src="./js/portfolioItems.js"></script>
+        <script src="./js/script.js"></script>
 
 
     </body>
