@@ -45,32 +45,11 @@
                 </li>
               </ul>
             </div> <!--Filters closing tag-->
-
-
-            <div id="template" style="display: none">
-              <section id="portfolioItems">
-               <article class="template" data-category="cat">
-                 <header>
-                   <h1 id="title">Project Name</h1>
-                   <p id="category">Project category</p>
-                   <div id="publishedOn">
-                     created <time pubdate datetime="2000-01-01">Publish Date</time>
-                   </div>
-                 </header>
-                 <section class="article-body">
-                   <p id="description">Project Description</p>
-                   <img id="portfolioImage" class="imageSize" src=""></img>
-                 </section>
-               </article>
-              </section>
-            </div>
-
-            <!--TODO display portfolio items with handlebars-->
+            <!--HANDLEBARS PORTFOLIO PLACEHOLDER-->
             <!--TODO show the newest projects on top-->
-            <div id="portfolioItemsContainer">
+            <section id="content"></section>
+          </section> <!--Portfolio section closing tag-->
 
-           </div>
-       </section> <!--Portfolio section closing tag-->
 
 
 
@@ -116,6 +95,20 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
         <script src="./js/portfolioItems.js"></script>
         <script src="./js/script.js"></script>
+        <script src="./js/handlebars-v4.0.5.js"></script>
+        <script id="portfolio-template" type="text/template">
+          <ul>
+            {{#each portfolio}}
+              <li class="portfolioItem">
+                <h1 id="title">{{title}}</h1>
+                <p id="category">{{category}}</p>
+                <div id = "publishedOn">Created: {{publishedOn}}</div>
+                <p id="description">{{description}}</p>
+                <img id="portfolioImage" class="imageSize"  src="{{img}}">
+              </li>
+            {{/each}}
+          </ul>
+        </script>
 
 
     </body>

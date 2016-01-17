@@ -1,24 +1,24 @@
+$(document).ready(function(){
+  var content = document.getElementById('content');
+  var html = '';
+  var data = {
+    title: 'Portfolio',
+    portfolio: [
+      { title: 'WedWeek',
+        description: 'WedWeek is the website for couples who want to get married',
+        publishedOn: 'January 12th 2016',
+        category: 'Website',
+        img: './img/img1.jpg'
+      },
+      { title: 'Tokka Guide',
+        description: 'Tokka guide is an app to guide you around your city',
+        publishedOn: 'January 14th 2016',
+        category: 'IOS app',
+        img: './img/img2.jpg'
+      }]
+  };
 
-function PortfolioItem(opts) {
-  this.title = opts.title;
-  this.description = opts.description;
-  this.publishedOn = opts.publishedOn;
-  this.category = opts.category;
-  this.img = opts.img;
-}
+var template = Handlebars.compile(document.getElementById('portfolio-template').innerHTML);
+content.innerHTML = template(data);
 
-PortfolioItem.prototype.toHTML = function() {
-  var $temp = $('#template #portfolioItems').clone();
-  $temp.find('#title').html(this.title);
-  $temp.find('#description').html(this.description);
-  $temp.find('#publishedOn').html(this.publishedOn);
-  $temp.find('#category').html(this.category);
-  $temp.find('img').attr('src', this.img);
-
-  $('#portfolioItemsContainer').append($temp);
-};
-
-obj.forEach(function(item) {
-  var n = new PortfolioItem(item);
-  n.toHTML();
 });
