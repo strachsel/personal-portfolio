@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Sonya Trachsel - Front-End Developer</title>
         <link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
         <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'> <!--Open Sans Condensed font-->
@@ -15,9 +16,7 @@
         </div> <!--Headline class closing tag-->
 
 
-<!--TODO Change the style of the nav -->
-
-        <div class="navigation">
+        <nav id="container">
             <ul class="nav">
                 <li class="button">
                     <a href="#portfolio" data-ga-event>Selected Work</a>
@@ -30,19 +29,14 @@
                 </li>
             </ul>
         </div> <!--Navigation class closing tag-->
-    </div> <!--Container class closing tag-->
+        </nav> <!--Container class closing tag-->
 
-          <!--      <div class="bounce" class="arrow">
-                  <center>
-                      <a href="#portfolio"><img src="img/Arrow-Down-icon.png"></a>
-                  </center>
-              </div> <!Arrow class closing tag-->
 
         <div a href="#portfolio" class="arrow bounce">
 
         </div>
 
-s
+
         <section id="portfolio" class="tab-content">
             <div>
               <ul id="filters">
@@ -72,13 +66,13 @@ s
                  </header>
                  <section class="article-body">
                    <p id="description">Project Description</p>
-                   <img id="portfolioImage" src=""></img>
+                   <img id="portfolioImage" class="imageSize" src=""></img>
                  </section>
                </article>
               </section>
             </div>
 
-            <!--DONE portfolio items displayed with a repeatable template-->
+            <!--TODO display portfolio items with handlebars-->
             <!--TODO show the newest projects on top-->
             <div id="portfolioItemsContainer">
 
@@ -90,7 +84,7 @@ s
 
          <div id="about-me">
             <center>
-                <img class=profile-photo src="./img/avatar.png"></img>
+                <img id="profile-photo" class="imageSize" src="./img/avatar.png"></img>
                 <h3>I'm a Front-End Developer based in Portland, OR, and I'm looking forward to helping you give your project the look and projection it deserves. I believe in clean coding and in taking advantage of all the resources the Internet has to offer to make your visitors fall in love with your brand or product.
                   I enjoy building everything from small business sites to rich interactive web apps. If you are a business seeking a web presence or an employer looking to hire, you can get in touch with me here.
                 </h3>
