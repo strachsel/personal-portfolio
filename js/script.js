@@ -33,36 +33,3 @@ $(document).ready(function(){
   var template = Handlebars.compile(document.getElementById('portfolio-template').innerHTML);
   content.innerHTML = template(data);
 });
-
-// scroll
-
-// window.smoothScroll('#connect', 2000);
-
-
-
-// $(document).ready(function(){
-//   $('#content').hide();
-//   $(window).scroll(function() {
-//     $( '#content' ).css( 'display', 'inline' ).fadeOut( 'slow' );
-//   });
-// });
-
-// // Function for the arrow to click to different areas
-//
-// $(document).ready(function(){
-//   $('.arrow').on('click', function(e){
-//     e.preventDefault();
-//     if (window.location.hash === '') {
-//       window.location.hash = '#content';
-//     }
-//     else if (window.location.hash === '#content'){
-//       window.location.hash = '#about-me';
-//     }
-//     else if (window.location.hash === '#about-me'){
-//       window.location.hash = '#connect';
-//     }
-//     else {
-//       $(this).hide();
-//     }
-//   });
-// });
