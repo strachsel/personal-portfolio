@@ -2,7 +2,18 @@
 
 /* WEB FONTS */
 
+@import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900");
+.srt, .form__label--hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
 
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:400,300,200,100,500,600");
 
 /* BASE STYLES */
 
@@ -15,35 +26,36 @@
 html {
 	background-color: #bdbdbd;
 	color: #fff;
-	font: normal 1em/1.5 Clavo, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", serif;
+	font-family: sans-serif;
 	text-align: center;
 }
 
 body {
-	margin: 100px;
+	/*margin: 100px;*/
 }
 
 h1,
 h2 {
 	font-size: 1.5rem;
 	font-style: italic;
+	font-weight: 300;
 	position: relative;
 }
-
+/*
 h1 {
 	margin: 0;
-}
+}*/
 
-h2 {
+/*h2 {
 	line-height: 1.25;
 	margin: 0;
-}
+}*/
 
 
-.container {
-	margin: 0 auto;
+.header {
+	margin: 10% auto;
 	max-width: 37.5rem;
-	padding: 7.5rem 1.25rem;
+	padding: 7.5rem 1.25rem
 }
 
 .imageSize {
@@ -64,45 +76,106 @@ ul {
     margin: 0;
     padding: 0;
 }
-
-.button {
-	background-color:#bdbdbd;
-	-moz-border-radius:14px;
-	-webkit-border-radius:14px;
-	border-radius:14px;
-	border:1px solid #fff;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Verdana;
-	font-size:16px;
-	padding:26px 31px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #2f6627;
-	}
-.button:hover {
-	background-color:#5cbf2a;
-	}
-.button:active {
-	position:relative;
-	top:1px;
+li {
+	display: inline;
 }
 
-/* Portfolio */
-
-img {
+#navigationButton {
+	color: #fff;
+	opacity: .6;
+	text-decoration: none;
+	padding: 1em;
+}
+#navigationButton:hover,
+#navigationButton:active {
+	color: #fff;
+	opacity: .9;
+	text-shadow: none;
 
 }
-#portfolioImage {
-	display: block;
-	max-width: 400px;
-	margin: 0 auto 30px;
-	border-radius: 20px;
+
+/* FILTER */
+
+#filters {
 }
 
+#date-filter {
 
+}
 
-/* about me */
+/* PORTFOLIO */
+
+ul.rig {
+  list-style: none;
+  font-size: 0px;
+}
+
+ul.rig li {
+  display: inline-block;
+  padding: 10px;
+  font-size: 16px;
+  font-size: 1rem;
+  vertical-align: top;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-moz-sizing: border-box;
+}
+
+ul.rig li img {
+  max-width: 100%;
+  height: auto;
+  margin: 0 0 10px;
+}
+
+ul.rig li h3 {
+  margin: 0 0 5px;
+}
+
+ul.rig li p {
+  font-size: .9em;
+  line-height: 1.5em;
+  color: #999;
+}
+
+/* class for 2 columns  */
+ul.rig.columns-2 li {
+  width: 47.5%; /* this value + 2.5 should = 50% */
+}
+
+ul.rig.columns-3 li {
+  width: 30.83%; /* this value + 2.5 should = 33% */
+}
+
+ul.rig.columns-4 li {
+  width: 22.5%; /* this value + 2.5 should = 25% */
+}
+
+@media (max-width:480px) {
+  ul.grid-nav li {
+    display: block;
+    margin: 0 0 5px;
+  }
+  ul.grid-nav lis a {
+    display: block;
+  }
+  ul.rig {
+    margin-left: 0;
+  }
+  ul.rig- li {
+    width: 100% !important; /* overwrite all li styles */
+    margin: 0 0 20px;
+  }
+}
+
+/* HOVER */
+
+ul.rig img:hover {
+  opacity:0.6;
+  text-align: justify;
+  color: #000;
+}
+
+/* ABOUT ME */
 
 #profile-photo {
 	display: block;
@@ -113,12 +186,35 @@ img {
 }
 
 #about-me {
-	position: relative;
+	position: ;
 	z-index: 4;
-	margin-top: 100px;
+  padding: 100px;
+  background-color: #fff;
 }
 
+#profileDescription {
+	font-weight: 300;
+  color: #989898;
+  margin: 100px;
+}
 
+#resume {
+  color: #989898;
+  border: thin solid #989898;
+  box-shadow: 1px 1px 0 0 #989898;
+  display: inline-block;
+  min-width: 15rem;
+  opacity: 1;
+  padding: 1.0625rem 1.5625rem;
+  position: relative;
+  z-index: 1;
+}
+#resume:hover,
+#resume:active {
+  color: black;
+  opacity: .9;
+  text-shadow: none;
+}
 .headline {
 	margin-bottom: 5rem;
 	position: relative;
@@ -134,38 +230,73 @@ img {
 	width: 2.5rem;
 }
 
+/* CONNECT */
 
-
-/* arrow bouncing */
-
-@import "compass/css3";
-
-@include keyframes(bounce) {
-	0%, 20%, 50%, 80%, 100% {
-    @include transform(translateY(0));
-  }
-	40% {
-    @include transform(translateY(-30px));
-  }
-	60% {
-    @include transform(translateY(-15px));
-  }
+#connect {
+  padding: 100px;
 }
 
-.arrow {
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  margin-left:-20px;
-  width: 40px;
-  height: 40px;
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIgNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0yOTMuNzUxLDQ1NS44NjhjLTIwLjE4MSwyMC4xNzktNTMuMTY1LDE5LjkxMy03My42NzMtMC41OTVsMCwwYy0yMC41MDgtMjAuNTA4LTIwLjc3My01My40OTMtMC41OTQtNzMuNjcyICBsMTg5Ljk5OS0xOTBjMjAuMTc4LTIwLjE3OCw1My4xNjQtMTkuOTEzLDczLjY3MiwwLjU5NWwwLDBjMjAuNTA4LDIwLjUwOSwyMC43NzIsNTMuNDkyLDAuNTk1LDczLjY3MUwyOTMuNzUxLDQ1NS44Njh6Ii8+DQo8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMjIwLjI0OSw0NTUuODY4YzIwLjE4LDIwLjE3OSw1My4xNjQsMTkuOTEzLDczLjY3Mi0wLjU5NWwwLDBjMjAuNTA5LTIwLjUwOCwyMC43NzQtNTMuNDkzLDAuNTk2LTczLjY3MiAgbC0xOTAtMTkwYy0yMC4xNzgtMjAuMTc4LTUzLjE2NC0xOS45MTMtNzMuNjcxLDAuNTk1bDAsMGMtMjAuNTA4LDIwLjUwOS0yMC43NzIsNTMuNDkyLTAuNTk1LDczLjY3MUwyMjAuMjQ5LDQ1NS44Njh6Ii8+DQo8L3N2Zz4=);
-  background-size: contain;
+.button {
+    border: thin solid #fff;
+    box-shadow: 1px 1px 0 0 #fff;
+    color: #fff;
+    opacity: .6;
+    display: inline-block;
+    min-width: 15rem;
+    opacity: 1;
+    padding: 1.0625rem 1.5625rem;
+    /*position: relative;*/
+    z-index: 1;
+}
+.button:hover,
+.button:active {
+  color: #fff;
+  opacity: .9;
+  text-shadow: none;
 }
 
-.bounce {
-  @include animation(bounce 2s infinite);
+.social-icon {
+  opacity: .8;
+  padding: 20px;
 }
 
+.social-icon:hover {
+  opacity: 9;
+}
+
+
+/* FOOTER */
+
+#copyright {
+  padding: 0;
+  font-family: sans-serif;
+  font-style: italic;
+  font-size: 12px;
+}
 
 /* connect */
+
+
+/* RESPONSIVE WEB */
+
+@media only screen and (max-width: 800px){
+
+button {
+  min-width: 100%;
+}
+
+a {
+  display: inline-block;
+  width: ;
+}
+
+#about-me {
+
+    font-size: 0.9em;
+    padding: 30px 0 30px 0;
+}
+.social-icon {
+  min-width: 100%;
+}
+
+}

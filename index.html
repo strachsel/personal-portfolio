@@ -7,9 +7,9 @@
         <link rel="stylesheet" type="text/css" href="css/styles.css" />
    </head>
     <body>
-      <div class="container">
+      <div id="top" class="header">
         <div class="headline">
-            <h1> I'm <strong>Sonya Trachsel</strong>. Front-End Developer, based in Portand, OR.</h1>
+            <h1> I'm <strong>Sonya Trachsel</strong>. Front-End Developer, based in Portland, OR.</h1>
         </div> <!--Headline class closing tag-->
 
         <nav id="container" role="navigation">
@@ -17,38 +17,31 @@
             <b class="srt">Toggle</b>
           </span>
           <ul class="nav">
-              <li class="button"><a href="#portfolio" data-ga-event>Selected Work</a></li>
-              <li class="button"><a href="#about-me" data-ga-event>About me</a></li>
-              <li class="button"><a href="#connect" data-ga-event>Connect</a></li>
+              <li><a id="navigationButton" href="#content" class="smoothScroll" data-ga-event>SELECTED WORK</a></li>
+              <li><a id="navigationButton" href="#about-me" class="smoothScroll" data-ga-event>ABOUT ME</a></li>
+              <li><a id="navigationButton"  href="#connect" class="smoothScroll"data-ga-event>CONNECT</a></li>
           </ul>
         </nav> <!--Navigation class closing tag-->
-      </div> <!--Container class closing tag-->
+      </div> <!--Top class closing tag-->
 
+      <div id="content">
+      </div> <!--Portfolio section closing tag-->
 
-        <div a href="#portfolio" class="arrow bounce">
+        <!-- <div> <a href="#content" data-ga-event class="arrow bounce"></a>
 
-        </div>
+        </div> -->
 
-
+<!--
         <section id="portfolio" class="tab-content">
-            <div>
-              <ul id="filters">
-                <li>
-                  <select id="date-filter">
-                    <option value="">-- Filter by Date --</option>
-                  </select>
-                </li>
-                <li>
-                  <select id="category-filter">
-                    <option value="">-- Filter by Categories --</option>
-                  </select>
-                </li>
-              </ul>
-            </div> <!--Filters closing tag-->
+          <ul id="filter">
+            <li id="category"><a href="#">All</a></li>
+            <li><a href="#">Design</a></li>
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#">IOS Development</a></li>
+          </ul>
+            </div> <!Filters closing tag-->
             <!--HANDLEBARS PORTFOLIO PLACEHOLDER-->
             <!--TODO show the newest projects on top-->
-            <section id="content"></section>
-          </section> <!--Portfolio section closing tag-->
 
 
 
@@ -57,59 +50,75 @@
          <div id="about-me">
             <center>
                 <img id="profile-photo" class="imageSize" src="./img/avatar.png"></img>
-                <h3>I'm a Front-End Developer based in Portland, OR, and I'm looking forward to helping you give your project the look and projection it deserves. I believe in clean coding and in taking advantage of all the resources the Internet has to offer to make your visitors fall in love with your brand or product.
-                  I enjoy building everything from small business sites to rich interactive web apps. If you are a business seeking a web presence or an employer looking to hire, you can get in touch with me here.
+                <h3 id="profileDescription">I'm a Front-End Developer based in Portland, OR. I enjoy building everything from small business sites to rich interactive web apps.
+                  If you are a business seeking a web presence or an employer looking to hire, you can get in touch with me here. <br><br>
+                  I’m a very creative person, and I enjoy challenging projects that require me to push my skills to a new level. When I’m not designing interfaces or messing around with some new CSS technique,
+                  ou’ll find me exploring some waterfall, taking photos, and eating indecent amounts of chocolate.
                 </h3>
             </center>
+            <nav id="container" role="navigation">
+              <span class="icn-toggle">
+                <b class="srt">Toggle</b>
+              </span>
+              <ul class="nav">
+              <li><a id="resume" href="">GET MY PDF RESUME</a></li>
+              </ul>
+            </nav> <!--Navigation class closing tag-->
         </div> <!--About me closing tag-->
 
         <section id="connect">
          <div class="container">
           <h1 class="headline">Let's connect</h1>
+
+          <nav id="container" role="navigation">
+            <span class="icn-toggle">
+              <b class="srt">Toggle</b>
+            </span>
+            <ul class="nav">
+                <li><a class="button" href="mailto:sofyatrachsel@gmail.com">EMAIL</a></li>
+                <li><a class="button" href="#">LINKEDIN</a></li>
+            </ul>
+          </nav> <!--Navigation class closing tag-->
+          </div> <!--Container class closing tag-->
+
           <div class="connect-social">
             <a href="http://github.com"><img src="img/github.png" alt="Github Logo" class="social-icon"></a>
             <a href="http://twitter.com"><img src="img/twitter.png" alt="Twitter Logo" class="social-icon"></a>
             <a href="http://linkedin.com"><img src="img/linkedin.png" alt="Linkedin Logo" class="social-icon"></a>
           </div> <!--Connect-social closing tag-->
-          <h4>Form Elements</h4>
-            <form>
-              <label class="form__label--hidden" for="name">Name:</label>
-              <input class="form__input" type="text" id="name" placeholder="Name">
 
-              <label class="form__label--hidden" for="email">Email:</label>
-              <input class="form__input" type="email" id="email" placeholder="sofyatrachsel@gmail.com">
-
-              <label class="form__label--hidden" for="msg">Message:</label>
-              <textarea class="form__input" id="msg" placeholder="Message..." rows="6"></textarea>
-
-              <input class="btn--default" type="submit" value="Submit">
-              <input class="btn--warning" type="reset" value="Reset">
-            </form>
           </div> <!--Container closing tag-->
         </section>
 
         <footer>
           <p id="copyright">&copy; Sonya Trachsel 2016</p>
+          <li><a id="navigationButton" href="#top" class="smoothScroll" title="Go to top of page" data-ga-event>
+            BACK TO THE TOP
+          </a></li>
         </footer>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="js/smoothscroll.js"></script>
         <script src="./js/portfolioItems.js"></script>
         <script src="./js/script.js"></script>
         <script src="./js/handlebars-v4.0.5.js"></script>
         <script id="portfolio-template" type="text/template">
-          <ul>
+          <ul class = "rig columns-2">
             {{#each portfolio}}
-              <li class="portfolioItem">
-                <h1 id="title">{{title}}</h1>
-                <p id="category">{{category}}</p>
-                <div id = "publishedOn">Created: {{publishedOn}}</div>
-                <p id="description">{{description}}</p>
-                <img id="portfolioImage" class="imageSize"  src="{{img}}">
+              <li class="caption">
+                <img id="portfolioImage" class="caption__media" class="imageSize"  src="{{img}}">
+                <div class="caption-overlay">
+                    <h3 class="caption__overlay__title" id="title">{{title}}</h3>
+                    <div class="caption__overlay__content">
+                      <div id="category">{{category}}</div>
+                      <div id="publishedOn">Created: {{publishedOn}}</div>
+                      <p id="description">{{description}}</p>
+                    </div>
+                </div>
               </li>
             {{/each}}
           </ul>
         </script>
-
-
     </body>
 </html>
