@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(function(){
   // Extract the text from the template
   var raw_template = $('#portfolio-template').html();
   // Complile that into an handlebars template
@@ -6,10 +6,19 @@ $(document).ready(function(){
   // Retrieve the placeHolder where the posts will be displayed
   var placeHolder = $('#content');
   // Fetch all portfolio items data from the server in JSON
-  $.get('js/portfolioItems.json', function(data){
+  $.get('data/portfolioItems.json', function(data){
       // Generate the HTML for each post+
     var html = template({portfolio:data});
       // Render the posts into the page
     placeHolder.append(html);
   }); // end get
+
 }); // end ready
+
+// //
+// $.get('data/portfolioItems.json', function(data){
+//   $('ul#filter a').click(function(){
+// //     if
+// //   });
+//
+// // });

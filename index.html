@@ -4,7 +4,13 @@
         <title>Sonya Trachsel - Front-End Developer</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="css/styles.css" />
+        <link rel="stylesheet" href="/css/icons.css">
+        <link rel="stylesheet" href="/css/base.css">
+        <link rel="stylesheet" href="/css/layout.css">
+        <link rel="stylesheet" href="/css/modules.css"
+        <link rel="stylesheet" href="/css/themes.css">
+        <link rel="stylesheet" href="/css/fonts.css" />
+        <link rel="stylesheet" href="/vendor/css/normalize.css">
     </head>
     <body>
       <div id="top" class="header">
@@ -24,7 +30,14 @@
         </nav> <!--Navigation class closing tag-->
       </div> <!--Top class closing tag-->
 
-
+      <!--FILTER MENU-->
+      <nav class="filter" role="navigation">
+        <ul id="filter">
+          <li><a href="#" id="comboLink">ALL</a></li>
+          <li><a href="#" id="webLink">Web</a></li>
+          <li><a href="#" id="iosLink">IOS</a></li>
+        </ul>
+      </nav>
 
       <div id="content">
       </div> <!--Portfolio section closing tag-->
@@ -45,7 +58,7 @@
               <b class="srt">Toggle</b>
             </span>
             <ul class="nav">
-              <li><a id="resume" href="">GET MY PDF RESUME</a></li>
+              <li><a class="buttonResume" id="resume" href="">GET MY PDF RESUME</a></li>
             </ul>
           </nav> <!--Navigation class closing tag-->
         </div> <!--About me closing tag-->
@@ -81,22 +94,22 @@
         <script src="js/handlebars-v4.0.5.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-        <script type="text/javascript" src="js/smoothscroll.js"></script>
-        <script src="js/portfolioItems.json"></script>
+        <script type="text/javascript" src="vendor/js/smoothscroll.js"></script>
+        <script src="data/portfolioItems.json"></script>
         <script src="js/script.js"></script>
+        <script src="js/portfoliofilter.js"></script>
         <script id="portfolio-template" type="text/template">
-          <ul class = "rig columns-2">
+          <ul id = "portfolio" class="rig columns-2">
             {{#each portfolio}}
-              <li class="caption">
+              <li class="item" data-category="{{category}}">
                 <img id="portfolioImage" class="caption__media" class="imageSize" src="{{img}}">
-                <div class="caption-overlay">
-                    <h3 class="caption__overlay__title" id="title">{{title}}</h3>
-                    <div class="caption__overlay__content">
-                      <div id="category">{{category}}</div>
+                    <div class="hovertext">
+                      <h3 id="title">{{title}}</h3>
+                      <div class="category">{{category}}</div>
+                      <a id="navigationButton" id="viewProject" href="#">VIEW PROJECT</a>
                       <div id="publishedOn">Created: {{publishedOn}}</div>
                       <p id="description">{{description}}</p>
                     </div>
-                </div>
               </li>
             {{/each}}
           </ul>
