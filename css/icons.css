@@ -1,3 +1,26 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline;
+}
+
+.navButton {
+  color: #fff;
+  opacity: .6;
+  text-decoration: none;
+  padding: 1em;
+}
+
+.navButton:hover {
+  color: #fff;
+  opacity: .9;
+  text-shadow: none;
+}
+
 /* CONTACT BUTTONS */
 .button {
     border: thin solid #fff;
@@ -10,40 +33,13 @@
     padding: 1.0625rem 1.5625rem;
     position: relative;
     z-index: 1;
-}
-/*.button:hover,
-.button:active {
-  color: #fff;
-  opacity: .9;
-  text-shadow: none;
-}*/
-
-.social-icon {
-  opacity: .8;
-  padding: 20px;
-}
-
-.social-icon:hover {
-  opacity: 9;
-}
-.button{
-  /*border: none;*/
-	font-family: inherit;
-	font-size: inherit;
-	color: inherit;
-	background: none;
-	cursor: pointer;
-	padding: 25px 80px;
-	display: inline-block;
-	margin: 15px 30px;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	font-weight: 700;
-	outline: none;
-	position: relative;
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	transition: all 0.3s;
+  	margin: 15px 30px;
+  	text-transform: uppercase;
+  	letter-spacing: 1px;
+  	font-weight: 700;
+  	-webkit-transition: all 0.3s;
+  	-moz-transition: all 0.3s;
+  	transition: all 0.3s;
 }
 
 .button:after{
@@ -54,7 +50,12 @@
 	-moz-transition: all 0.3s;
 	transition: all 0.3s;
 }
-}
+/*.button:hover,
+.button:active {
+  color: #fff;
+  opacity: .9;
+  text-shadow: none;
+}*/
 .button {
 	overflow: hidden;
 }
@@ -85,6 +86,15 @@
 .button:active:after {
 	width: 101%;
 	opacity: 1;
+}
+
+.social-icon {
+  opacity: .8;
+  padding: 20px;
+}
+
+.social-icon:hover {
+  opacity: 9;
 }
 
 /* Resume button*/
