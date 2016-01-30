@@ -1,0 +1,330 @@
+/* HEADER */
+
+.header {
+	margin: 10% auto;
+	max-width: 37.5rem;
+	padding: 7.5rem 1.25rem
+}
+
+.imageSize {
+	width: 100%;
+	height: auto;
+}
+
+/* NAVIGATION */
+
+
+nav {
+	width: 100%;
+	height: auto;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+li {
+	display: inline;
+}
+
+#navigationButton,
+#filter {
+	color: #fff;
+	opacity: .6;
+	text-decoration: none;
+	padding: 1em;
+}
+#navigationButton,
+#filter:hover,
+#navigationButton,
+#filter:active {
+	color: #fff;
+	opacity: .9;
+	text-shadow: none;
+
+}
+
+
+/* PORTFOLIO */
+
+ul.rig {
+  list-style: none;
+  font-size: 0px;
+}
+
+ul.rig li {
+  display: inline-block;
+  padding: 10px;
+  font-size: 16px;
+  font-size: 1rem;
+  vertical-align: top;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-moz-sizing: border-box;
+}
+
+ul.rig li img {
+  max-width: 100%;
+  height: auto;
+  margin: 0 0 10px;
+}
+
+ul.rig li h3 {
+  margin: 0 0 5px;
+}
+
+ul.rig li p {
+  font-size: .9em;
+  line-height: 1.5em;
+  color: #999;
+}
+
+/* class for 2 columns  */
+ul.rig.columns-2 li {
+  width: 47.5%; /* this value + 2.5 should = 50% */
+}
+
+ul.rig.columns-3 li {
+  width: 30.83%; /* this value + 2.5 should = 33% */
+}
+
+ul.rig.columns-4 li {
+  width: 22.5%; /* this value + 2.5 should = 25% */
+}
+
+@media (max-width:480px) {
+  ul.grid-nav li {
+    display: block;
+    margin: 0 0 5px;
+  }
+  ul.grid-nav lis a {
+    display: block;
+  }
+  ul.rig {
+    margin-left: 0;
+  }
+  ul.rig li {
+    width: 100% !important; /* overwrite all li styles */
+    margin: 0 0 20px;
+  }
+}
+
+/* ABOUT ME */
+
+#profile-photo {
+	display: block;
+	max-width: 200px;
+	margin: 0 auto 30px;
+	border-radius: 20px;
+	margin-bottom: 70px;
+}
+
+#about-me {
+	position: ;
+	z-index: 4;
+  padding: 100px;
+  background-color: #fff;
+}
+
+#profileDescription {
+	font-weight: 300;
+  color: #989898;
+  margin: 100px;
+}
+
+.headline {
+	margin-bottom: 5rem;
+	position: relative;
+}
+.headline:after {
+	background-color: #fff;
+	bottom: -2.5rem;
+	content: "";
+	height: 1px;
+	left: 50%;
+	margin-left: -1.25rem;
+	position: absolute;
+	width: 2.5rem;
+}
+
+/* CONNECT */
+
+#connect {
+  padding: 100px;
+}
+
+
+
+/* FOOTER */
+
+#copyright {
+  padding: 0;
+  font-family: sans-serif;
+  font-style: italic;
+  font-size: 12px;
+}
+
+
+
+
+
+/* HOVER */
+
+/*.grid {
+	position: relative;
+	clear: both;
+	margin: 0 auto;
+	padding: 1em 0 4em;
+	max-width: 1000px;
+	list-style: none;
+	text-align: center;
+}
+
+/* Common style */
+/*.grid figure {
+	position: relative;
+	float: left;
+	overflow: hidden;
+	margin: 10px 1%;
+	min-width: 320px;
+	max-width: 480px;
+	max-height: 360px;
+	width: 48%;
+	height: auto;
+	background: #;
+	text-align: center;
+	cursor: pointer;
+}
+
+.grid figure img {
+	position: relative;
+	display: block;
+	min-height: 100%;
+	max-width: 100%;
+	opacity: 0.8;
+}
+
+.grid figure figcaption {
+	padding: 2em;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+	pointer-events: none;
+}
+
+.grid figure figcaption,
+.grid figure figcaption > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+/*.grid figure figcaption > a {
+	z-index: 1000;
+	text-indent: 200%;
+	white-space: nowrap;
+	font-size: 0;
+	opacity: 0;
+}
+
+.grid figure h2 {
+	word-spacing: -0.15em;
+	font-weight: 300;
+}
+
+.grid figure h2 span {
+	font-weight: 800;
+}
+
+.grid figure h2,
+.grid figure p {
+	margin: 0;
+}
+
+.grid figure p {
+	letter-spacing: 1px;
+	font-size: 68.5%;
+}
+
+/*figure.effect-jazz {
+	background: -webkit-linear-gradient(-45deg, #f3cf3f 0%,#f33f58 100%);
+	background: linear-gradient(-45deg, #f3cf3f 0%,#f33f58 100%);
+}
+
+figure.effect-jazz img {
+	opacity: 0.9;
+}
+
+figure.effect-jazz figcaption::after,
+figure.effect-jazz img,
+figure.effect-jazz p {
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+}
+
+figure.effect-jazz figcaption::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	content: '';
+	opacity: 0;
+	-webkit-transform: rotate3d(0,0,1,45deg) scale3d(1,0,1);
+	transform: rotate3d(0,0,1,45deg) scale3d(1,0,1);
+	-webkit-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+}
+
+figure.effect-jazz h3,
+figure.effect-jazz p {
+	opacity: 1;
+	-webkit-transform: scale3d(0.8,0.8,1);
+	transform: scale3d(0.8,0.8,1);
+}
+
+figure.effect-jazz h3 {
+	padding-top: 26%;
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+}
+
+figure.effect-jazz p {
+	padding: 0.5em 2em;
+	text-transform: none;
+	font-size: 0.85em;
+	opacity: 0;
+}
+
+figure.effect-jazz:hover img {
+	opacity: 0.7;
+	-webkit-transform: scale3d(1.05,1.05,1);
+	transform: scale3d(1.05,1.05,1);
+}
+
+figure.effect-jazz:hover figcaption::after {
+	opacity: 1;
+	-webkit-transform: rotate3d(0,0,1,45deg) scale3d(1,1,1);
+	transform: rotate3d(0,0,1,45deg) scale3d(1,1,1);
+}
+
+figure.effect-jazz:hover h3,
+figure.effect-jazz:hover p
+ {
+	opacity: 1;
+	-webkit-transform: scale3d(1,1,1);
+	transform: scale3d(1,1,1);
+*/
