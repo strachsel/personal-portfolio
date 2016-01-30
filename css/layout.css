@@ -26,4 +26,8 @@
     padding: 10;
   }
 
+  nav.container {
+    display: flex;
+    justify-content: center;
+  }
 } /* end media */
