@@ -177,12 +177,3 @@ li {
 	width: 101%;
 	opacity: 1;
 }
-
-
-/* IMAGE HOVER */
-
-ul.rig img:hover {
-  opacity:0.6;
-  text-align: justify;
-  color: #000;
-}

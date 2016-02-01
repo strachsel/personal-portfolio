@@ -13,13 +13,13 @@
 
 /* PORTFOLIO */
 
-.rig {
+.project-item-layout {
   list-style: none;
   font-size: 0px;
 	margin-top: 30px;
 }
 
-.rig div {
+.project-item-layout div {
   display: inline-block;
   /*padding: 10px;*/
   font-size: 16px;
@@ -30,32 +30,32 @@
   -webkit-moz-sizing: border-box;
 }
 
-.rig div img {
+.project-item-layout div img {
   max-width: 100%;
   height: auto;
   margin: 0 0 10px;
 }
 
-.rig div h3 {
+.project-item-layout div h3 {
   margin: 0 0 5px;
 }
 
-.rig div p {
+.project-item-layout div p {
   font-size: .9em;
   line-height: 1.5em;
   color: #999;
 }
 
 /* class for 2 columns  */
-.rig.columns-2 div {
+.project-item-layout.columns-2 div {
   width: 47.5%; /* this value + 2.5 should = 50% */
 }
 
-.rig.columns-3 div {
+.project-item-layout.columns-3 div {
   width: 30.83%; /* this value + 2.5 should = 33% */
 }
 
-.rig.columns-4 div {
+.project-item-layout.columns-4 div {
   width: 22.5%; /* this value + 2.5 should = 25% */
 }
 
@@ -67,10 +67,10 @@
   .grid-nav lis a {
     display: block;
   }
-  .rig {
+  .project-item-layout {
     margin-left: 0;
   }
-  .rig div {
+  .project-item-layout div {
     width: 100% !important; /* overwrite all li styles */
     margin: 0 0 20px;
   }
@@ -93,7 +93,7 @@
 	cursor: pointer;
 }
 
-.rig .item img {
+.project-item-layout .item img {
 	position: relative;
 	display: block;
 	min-height: 100%;
@@ -101,7 +101,7 @@
 	opacity: 0.8;
 }
 
-.rig .item .hovertext {
+.project-item-layout .item .hovertext {
 	padding: ;
 	color: #fff;
 	text-transform: uppercase;
@@ -110,8 +110,8 @@
 	backface-visibility: hidden;
 }
 
-.rig .item .hovertext::before,
-.rig .item .hovertext::after {
+.project-item-layout .item .hovertext::before,
+.project-item-layout .item .hovertext::after {
 	pointer-events: none;
 }
 
@@ -123,8 +123,8 @@
 
 .is-expanded {}
 
-.rig .item .hovertext,
-.rig .item .hovertext > a {
+.project-item-layout .item .hovertext,
+.project-item-layout .item .hovertext > a {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -132,7 +132,7 @@
 	height: 100%;
 }
 
-.rig .item .hovertext > a { /* HIDES THE "VIEW PROJECT"*/
+.project-item-layout .item .hovertext > a { /* HIDES THE "VIEW PROJECT"*/
 	z-index: 1000; /* TODO: How to show when Hover?? */
 	text-indent: 200%;
 	white-space: nowrap;
@@ -140,24 +140,24 @@
 	opacity: 0;
 }
 
-.rig .item h3,
-.rig .item a {
+.project-item-layout .item h3,
+.project-item-layout .item a {
 	word-spacing: -0.15em;
 	font-weight: 300;
 }
 
-.rig .item h3,
-.rig .item a {
+.project-item-layout .item h3,
+.project-item-layout .item a {
 	font-weight: 800;
 }
 
-.rig .item h3,
-.rig .item p,
-.rig .item a {
+.project-item-layout .item h3,
+.project-item-layout .item p,
+.project-item-layout .item a {
 	margin: 0;
 }
 
-.rig .item p {
+.project-item-layout .item p {
 	letter-spacing: 1px;
 	font-size: 68.5%;
 }
