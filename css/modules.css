@@ -59,7 +59,7 @@
   width: 22.5%; /* this value + 2.5 should = 25% */
 }
 
-@media (max-width:300) {
+@media (max-width:400) {
   .grid-nav div {
     display: block;
     margin: 0 0 5px;
@@ -117,7 +117,7 @@
 
 
 .project-item {}
-.item-layout {
+.project-item-layout {
 
 }
 
