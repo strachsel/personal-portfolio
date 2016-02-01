@@ -13,73 +13,9 @@
 
 /* PORTFOLIO */
 
-.project-item-layout {
-  list-style: none;
-  font-size: 0px;
-	margin-top: 30px;
-}
-
-.project-item-layout div {
-  display: inline-block;
-  /*padding: 10px;*/
-  font-size: 16px;
-  font-size: 1rem;
-  vertical-align: top;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-moz-sizing: border-box;
-}
-
-.project-item-layout div img {
-  max-width: 100%;
-  height: auto;
-  margin: 0 0 10px;
-}
-
-.project-item-layout div h3 {
-  margin: 0 0 5px;
-}
-
-.project-item-layout div p {
-  font-size: .9em;
-  line-height: 1.5em;
-  color: #999;
-}
-
-/* class for 2 columns  */
-.project-item-layout.columns-2 div {
-  width: 47.5%; /* this value + 2.5 should = 50% */
-}
-
-.project-item-layout.columns-3 div {
-  width: 30.83%; /* this value + 2.5 should = 33% */
-}
-
-.project-item-layout.columns-4 div {
-  width: 22.5%; /* this value + 2.5 should = 25% */
-}
-
-@media (max-width:400) {
-  .grid-nav div {
-    display: block;
-    margin: 0 0 5px;
-  }
-  .grid-nav lis a {
-    display: block;
-  }
-  .project-item-layout {
-    margin-left: 0;
-  }
-  .project-item-layout div {
-    width: 100% !important; /* overwrite all li styles */
-    margin: 0 0 20px;
-  }
-}
-
-
 /* PORTFOLIO HOVER EFFECT */
 
-.item {
+.project-item {
 	position: relative;
 	overflow: hidden;
 	/*margin: 10px 1%;*/
@@ -93,7 +29,7 @@
 	cursor: pointer;
 }
 
-.project-item-layout .item img {
+.project-item-layout .project-item img {
 	position: relative;
 	display: block;
 	min-height: 100%;
@@ -101,7 +37,7 @@
 	opacity: 0.8;
 }
 
-.project-item-layout .item .hovertext {
+.project-item-layout .project-item .hovertext {
 	padding: ;
 	color: #fff;
 	text-transform: uppercase;
@@ -110,21 +46,16 @@
 	backface-visibility: hidden;
 }
 
-.project-item-layout .item .hovertext::before,
-.project-item-layout .item .hovertext::after {
+.project-item-layout .project-item .hovertext::before,
+.project-item-layout .project-item .hovertext::after {
 	pointer-events: none;
 }
 
 
-.project-item {}
-.project-item-layout {
-
-}
-
 .is-expanded {}
 
-.project-item-layout .item .hovertext,
-.project-item-layout .item .hovertext > a {
+.project-item-layout .project-item .hovertext,
+.project-item-layout .project-item .hovertext > a {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -132,7 +63,7 @@
 	height: 100%;
 }
 
-.project-item-layout .item .hovertext > a { /* HIDES THE "VIEW PROJECT"*/
+.project-item-layout .project-item .hovertext > a { /* HIDES THE "VIEW PROJECT"*/
 	z-index: 1000; /* TODO: How to show when Hover?? */
 	text-indent: 200%;
 	white-space: nowrap;
@@ -140,24 +71,24 @@
 	opacity: 0;
 }
 
-.project-item-layout .item h3,
-.project-item-layout .item a {
+.project-item-layout .project-item h3,
+.project-item-layout .project-item a {
 	word-spacing: -0.15em;
 	font-weight: 300;
 }
 
-.project-item-layout .item h3,
-.project-item-layout .item a {
+.project-item-layout .project-item h3,
+.project-item-layout .project-item a {
 	font-weight: 800;
 }
 
-.project-item-layout .item h3,
-.project-item-layout .item p,
-.project-item-layout .item a {
+.project-item-layout .project-item h3,
+.project-item-layout .project-item p,
+.project-item-layout .project-item a {
 	margin: 0;
 }
 
-.project-item-layout .item p {
+.project-item-layout .project-item p {
 	letter-spacing: 1px;
 	font-size: 68.5%;
 }
@@ -166,14 +97,14 @@
 	display:block;
 }
 
-.item .hovertext::after,
-.item img,
-.item p {
+.project-item .hovertext::after,
+.project-item img,
+.project-item p {
 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
 	transition: opacity 0.35s, transform 0.35s;
 }
 
-.item .hovertext::after {
+.project-item .hovertext::after {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -189,40 +120,40 @@
 	transform-origin: 50% 50%;
 }
 
-.item h3,
-.item div a {
+.project-item h3,
+.project-item div a {
 	opacity: 1;
 	-webkit-transform: scale3d(0.8,0.8,1);
 	transform: scale3d(0.8,0.8,1);
 }
 
-.item h3 {
+.project-item h3 {
 	padding-top: 40%;
 	-webkit-transition: -webkit-transform 0.35s;
 	transition: transform 0.35s;
 }
 
-.item p {
+.project-item p {
 	padding: 0.5em 2em;
 	text-transform: none;
 	font-size: 0.85em;
 	opacity: 0;
 }
 
-.item:hover img {
+.project-item:hover img {
 	opacity: 0.7;
 	-webkit-transform: scale3d(1.05,1.05,1);
 	transform: scale3d(1.05,1.05,1);
 }
 
-.item:hover .hovertext::after {
+.project-item:hover .hovertext::after {
 	opacity: 1;
 	-webkit-transform: rotate3d(0,0,1,45deg) scale3d(1,1,1);
 	transform: rotate3d(0,0,1,45deg) scale3d(1,1,1);
 }
 
-.item:hover h3,
-.item:hover p
+.project-item:hover h3,
+.project-item:hover p
  {
 	opacity: 1;
 	-webkit-transform: scale3d(1,1,1);
