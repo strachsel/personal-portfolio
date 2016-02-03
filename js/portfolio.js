@@ -15,6 +15,8 @@ $(function(){
 
 }); // end ready
 
+
+
 // //
 // $.get('data/portfolioItems.json', function(data){
 //   $('ul#filter a').click(function(){

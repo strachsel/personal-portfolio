@@ -23,9 +23,9 @@
             <b class="srt">Toggle</b>
           </span>
           <ul class="nav">
-              <li><a class="navButton smoothScroll" href="#content" data-ga-event>SELECTED WORK</a></li>
-              <li><a class="navButton smoothScroll" href="#about-me" data-ga-event>ABOUT ME</a></li>
-              <li><a class="navButton smoothScroll"  href="#connect" data-ga-event>CONNECT</a></li>
+              <li><a class="navButton smoothScroll" href="/portfolio" data-ga-event>SELECTED WORK</a></li>
+              <li><a class="navButton smoothScroll" href="/about-me" data-ga-event>ABOUT ME</a></li>
+              <li><a class="navButton smoothScroll"  href="/contact-me" data-ga-event>CONNECT</a></li>
           </ul>
         </nav> <!--Navigation class closing tag-->
       </div> <!--Top class closing tag-->
@@ -87,7 +87,7 @@
 
         <footer>
           <p id="copyright">&copy; Sonya Trachsel 2016</p>
-            <li><a class="navButton smoothScroll" href="#top" title="Go to top of page" data-ga-event>
+            <li><a class="navButton smoothScroll" href="/" title="Go to top of page" data-ga-event>
               BACK TO THE TOP
             </a></li>
         </footer>
@@ -95,8 +95,9 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
         <script type="text/javascript" src="vendor/js/smoothscroll.js"></script>
+        <script src="vendor/js/page.js"></script>
         <script src="data/portfolioItems.json"></script>
-        <script src="js/script.js"></script>
+        <script src="js/portfolio.js"></script>
         <script src="js/portfoliofilter.js"></script>
         <script id="portfolio-template" type="text/template">
           <div id="portfolio" class="project-item-layout columns-2">
@@ -110,13 +111,20 @@
                     <a class="navButton project-button" href>VIEW PROJECT</a>
                   </div>
                 </div>
-                <!-- <div class="modalwindow">
-                  <p id="description">{{description}}</p>
-                  <div id="publishedOn">Created: {{publishedOn}}</div>
-                </div> -->
               </div> <!--END ITEM-->
+              <div id="expanded" class="is-expanded">
+                <h3 id="title">{{title}}</h3>
+                <img id="portfolioImage" class="caption__media" class="imageSize" src="{{img}}">
+                <p id="description">{{description}}</p>
+                <div id="publishedOn">Created: {{publishedOn}}</div>
+              </div>
             {{/each}}
           </div> <!--END PORTFOLIO-->
         </script>
+        <script src="controller/homeController.js"></script>
+        <script src="controller/portfolioController.js"></script>
+        <script src="controller/aboutController.js"></script>
+        <script src="controller/contactController.js"></script>
+        <script src="js/routes.js"></script>
     </body>
 </html>

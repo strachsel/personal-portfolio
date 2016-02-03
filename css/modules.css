@@ -134,7 +134,31 @@
 	opacity: 0;
 }
 
-.is-expanded {}
+
+
+/* PORTFOLIO MODAL WINDOW */
+
+#expanded {
+	display: none;
+}
+
+.is-expanded {
+	position: fixed;
+	z-index: 10;
+  text-align: center;
+  background-repeat: no-repeat;
+  top:;
+  left: 50%;
+  margin-left: -450px;
+  margin-top: -300px;
+  max-height: 100%;
+  bottom: 0;
+  width: 900px;
+  height: 900px;
+  background-color: #000;
+  opacity: 1;
+  overflow: scroll;
+}
 
 /* ABOUT ME */
 
