@@ -1,27 +1,100 @@
-.filter {
-  padding: 20px;
+
+/* PORTFOLIO LAYOUT */
+
+.project-item-layout {
+  list-style: none;
+  font-size: 0px;
+	margin-top: 30px;
 }
+
+.project-item-layout div {
+  display: inline-block;
+  /*padding: 10px;*/
+  font-size: 16px;
+  font-size: 1rem;
+  vertical-align: top;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-moz-sizing: border-box;
+}
+
+.project-item-layout div img {
+  max-width: 100%;
+  height: auto;
+  margin: 0 0 10px;
+}
+
+.project-item-layout div h3 {
+  margin: 0 0 5px;
+}
+
+.project-item-layout div p {
+  font-size: .9em;
+  line-height: 1.5em;
+  color: #999;
+}
+
+/* class for 2 columns  */
+.project-item-layout.columns-2 div {
+  width: 47.5%; /* this value + 2.5 should = 50% */
+}
+
+.project-item-layout.columns-3 div {
+  width: 30.83%; /* this value + 2.5 should = 33% */
+}
+
+.project-item-layout.columns-4 div {
+  width: 22.5%; /* this value + 2.5 should = 25% */
+}
+
+@media (max-width:400) {
+  .grid-nav div {
+    display: block;
+    margin: 0 0 5px;
+  }
+  .grid-nav lis a {
+    display: block;
+  }
+  .project-item-layout {
+    margin-left: 0;
+  }
+  .project-item-layout div {
+    width: 100% !important; /* overwrite all li styles */
+    margin: 0 0 20px;
+  }
+}
+
 
 /* RESPONSIVE WEB */
 
-@media only screen and (max-width: 800px){
+@media (max-width: 769px){
 
-button {
-  min-width: 100%;
-}
+  a {
+    display: inline-block;
+    width: ;
+  }
 
-a {
-  display: inline-block;
-  width: ;
-}
+  #profileDescription {
+      display: inline-block;
+      position: relative;
+      font-size: 1em;
+      padding: 0;
+      margin: 0;
+  }
 
-#about-me {
+  .social-icon {
+    min-width: 100%;
+  }
 
-    font-size: 0.9em;
-    padding: 30px 0 30px 0;
-}
-.social-icon {
-  min-width: 100%;
-}
+  #menu {
+    display: inline-block;
+    margin: 0;
+    padding: 10;
+  }
 
-}
+  nav.container {
+   display: flex;
+   justify-content: center;
+ }
+
+} /* end media */

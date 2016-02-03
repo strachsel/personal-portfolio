@@ -7,9 +7,9 @@
         <link rel="stylesheet" href="/css/icons.css">
         <link rel="stylesheet" href="/css/base.css">
         <link rel="stylesheet" href="/css/layout.css">
-        <link rel="stylesheet" href="/css/modules.css"
+        <link relf="stylesheet" href="/css/modules.css"
         <link rel="stylesheet" href="/css/themes.css">
-        <link rel="stylesheet" href="/css/fonts.css" />
+        <link rel="stylesheet" href="/css/fonts.css">
         <link rel="stylesheet" href="/vendor/css/normalize.css">
     </head>
     <body>
@@ -18,24 +18,24 @@
             <h1> I'm <strong>Sonya Trachsel</strong>. Front-End Developer, based in Portland, OR.</h1>
         </div> <!--Headline class closing tag-->
 
-        <nav id="container" role="navigation">
+        <nav class="container" role="navigation">
           <span class="icn-toggle">
             <b class="srt">Toggle</b>
           </span>
           <ul class="nav">
-              <li><a id="navigationButton" href="#content" class="smoothScroll" data-ga-event>SELECTED WORK</a></li>
-              <li><a id="navigationButton" href="#about-me" class="smoothScroll" data-ga-event>ABOUT ME</a></li>
-              <li><a id="navigationButton"  href="#connect" class="smoothScroll"data-ga-event>CONNECT</a></li>
+              <li><a class="navButton smoothScroll" href="/portfolio" data-ga-event>SELECTED WORK</a></li>
+              <li><a class="navButton smoothScroll" href="/about-me" data-ga-event>ABOUT ME</a></li>
+              <li><a class="navButton smoothScroll"  href="/contact-me" data-ga-event>CONNECT</a></li>
           </ul>
         </nav> <!--Navigation class closing tag-->
       </div> <!--Top class closing tag-->
 
       <!--FILTER MENU-->
-      <nav class="filter" role="navigation">
-        <ul id="filter">
-          <li><a href="#" id="comboLink">ALL</a></li>
-          <li><a href="#" id="webLink">Web</a></li>
-          <li><a href="#" id="iosLink">IOS</a></li>
+      <nav id="menu" role="navigation">
+        <ul>
+          <li><a href="#"  class="navButton" id="comboLink">ALL</a></li>
+          <li><a href="#"  class="navButton" id="webLink">Web</a></li>
+          <li><a href="#"  class="navButton" id="iosLink">IOS</a></li>
         </ul>
       </nav>
 
@@ -47,13 +47,13 @@
        <div id="about-me">
           <center>
             <img id="profile-photo" class="imageSize" src="./img/avatar.png"></img>
-            <h3 id="profileDescription">I'm a Front-End Developer based in Portland, OR. I enjoy building everything from small business sites to rich interactive web apps.
+            <h2 id="profileDescription">I'm a Front-End Developer based in Portland, OR. I enjoy building everything from small business sites to rich interactive web apps.
                 If you are a business seeking a web presence or an employer looking to hire, you can get in touch with me here. <br><br>
                 I’m a very creative person, and I enjoy challenging projects that require me to push my skills to a new level. When I’m not designing interfaces or messing around with some new CSS technique,
                 ou’ll find me exploring some waterfall, taking photos, and eating indecent amounts of chocolate.
-            </h3>
+            </h2>
           </center>
-          <nav id="container" role="navigation">
+          <nav class="container" role="navigation">
             <span class="icn-toggle">
               <b class="srt">Toggle</b>
             </span>
@@ -66,13 +66,13 @@
         <section id="connect">
           <div class="container">
             <h1 class="headline">Let's connect</h1>
-            <nav id="container" role="navigation">
+            <nav class="container" role="navigation">
               <span class="icn-toggle">
                 <b class="srt">Toggle</b>
               </span>
               <ul class="nav">
-                <li><a class="button" href="mailto:sofyatrachsel@gmail.com">EMAIL</a></li>
-                <li><a class="button" href="#">LINKEDIN</a></li>
+                <li><a class="inln button" href="mailto:sofyatrachsel@gmail.com">EMAIL</a></li>
+                <li><a class="inln button" href="#">LINKEDIN</a></li>
               </ul>
             </nav> <!--Navigation class closing tag-->
 
@@ -87,32 +87,44 @@
 
         <footer>
           <p id="copyright">&copy; Sonya Trachsel 2016</p>
-            <li><a id="navigationButton" href="#top" class="smoothScroll" title="Go to top of page" data-ga-event>
+            <li><a class="navButton smoothScroll" href="/" title="Go to top of page" data-ga-event>
               BACK TO THE TOP
             </a></li>
         </footer>
-        <script src="js/handlebars-v4.0.5.js"></script>
+        <script src="vendor/js/handlebars-v4.0.5.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
         <script type="text/javascript" src="vendor/js/smoothscroll.js"></script>
+        <script src="vendor/js/page.js"></script>
         <script src="data/portfolioItems.json"></script>
-        <script src="js/script.js"></script>
+        <script src="js/portfolio.js"></script>
         <script src="js/portfoliofilter.js"></script>
         <script id="portfolio-template" type="text/template">
-          <ul id = "portfolio" class="rig columns-2">
+          <div id="portfolio" class="project-item-layout columns-2">
             {{#each portfolio}}
-              <li class="item" data-category="{{category}}">
+              <div class="project-item" data-category="{{category}}">
                 <img id="portfolioImage" class="caption__media" class="imageSize" src="{{img}}">
-                    <div class="hovertext">
-                      <h3 id="title">{{title}}</h3>
-                      <div class="category">{{category}}</div>
-                      <a id="navigationButton" id="viewProject" href="#">VIEW PROJECT</a>
-                      <div id="publishedOn">Created: {{publishedOn}}</div>
-                      <p id="description">{{description}}</p>
-                    </div>
-              </li>
+                <div class="hovertext">
+                  <h3 id="title">{{title}}</h3>
+                  <h4 class="category">{{category}}</h4>
+                  <div id="viewProject">
+                    <a class="navButton project-button" href>VIEW PROJECT</a>
+                  </div>
+                </div>
+              </div> <!--END ITEM-->
+              <div id="expanded" class="is-expanded">
+                <h3 id="title">{{title}}</h3>
+                <img id="portfolioImage" class="caption__media" class="imageSize" src="{{img}}">
+                <p id="description">{{description}}</p>
+                <div id="publishedOn">Created: {{publishedOn}}</div>
+              </div>
             {{/each}}
-          </ul>
+          </div> <!--END PORTFOLIO-->
         </script>
+        <script src="controller/homeController.js"></script>
+        <script src="controller/portfolioController.js"></script>
+        <script src="controller/aboutController.js"></script>
+        <script src="controller/contactController.js"></script>
+        <script src="js/routes.js"></script>
     </body>
 </html>
