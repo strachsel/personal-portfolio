@@ -138,23 +138,26 @@
 
 /* PORTFOLIO MODAL WINDOW */
 
-#expanded {
+.project-item-layout .expanded {
 	display: none;
+	position:fixed;
+	z-index: 10;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.25)
 }
 
-.is-expanded {
+.isExpanded {
 	position: fixed;
-	z-index: 10;
+	width: 500px;
+	height: 500px;
   text-align: center;
-  background-repeat: no-repeat;
-  top:;
-  left: 50%;
-  margin-left: -450px;
-  margin-top: -300px;
-  max-height: 100%;
-  bottom: 0;
-  width: 900px;
-  height: 900px;
+  background:#fff;
+  top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
   background-color: #000;
   opacity: 1;
   overflow: scroll;
