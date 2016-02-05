@@ -26,6 +26,8 @@
               <li><a class="navButton smoothScroll" href="/portfolio" data-ga-event>SELECTED WORK</a></li>
               <li><a class="navButton smoothScroll" href="/about-me" data-ga-event>ABOUT ME</a></li>
               <li><a class="navButton smoothScroll"  href="/contact-me" data-ga-event>CONNECT</a></li>
+              <li><a class="navButton smoothScroll"  href="/github" data-ga-event>GITHUB</a></li>
+          </ul>
           </ul>
         </nav> <!--Navigation class closing tag-->
       </div> <!--Top class closing tag-->
@@ -42,12 +44,14 @@
       <div id="content">
       </div> <!--Portfolio section closing tag-->
 
-      <section>
-        <h1>Check out my recent Project on GitHub:</h1>
-        <ul>
-          <li>Coding</li>
-        </ul>
-      </section>
+      <div id="about">
+        <section>
+          <h1>Check out my recent Project on GitHub:</h1>
+          <ul>
+            <li>Coding</li>
+          </ul>
+        </section>
+      </div>
 
 
 
@@ -132,10 +136,14 @@
             {{/each}}
           </div> <!--END PORTFOLIO-->
         </script>
+        <script src="js/githubToken.js"></script>
         <script src="controller/homeController.js"></script>
         <script src="controller/portfolioController.js"></script>
-        <script src="controller/aboutController.js"></script>
         <script src="controller/contactController.js"></script>
+        <script src="controller/aboutController.js"></script>
+        <script src="js/repo.js"></script>
+        <script src="js/repoView.js"></script>
+        <script src="controller/gitController.js"></script>
         <script src="js/routes.js"></script>
     </body>
 </html>
