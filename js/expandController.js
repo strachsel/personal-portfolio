@@ -35,16 +35,14 @@
         var portfolioId = $(this).data('portfolio-id');
         $('.expanded').hide();
         $('.expanded-'+ portfolioId).show('slow', function() {
-          console.log('number')
         });
       });
 
   // update to .close class.  target close class
-    $(document).on('click', '.close', function(e){
+    $(document).on('click', '.expanded', function(e){
         e.preventDefault();
       // get specific project .expanded item.
         $('.expanded').hide('slow', function(){
-         console.log('number')
         });
       });
 
