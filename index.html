@@ -4,13 +4,13 @@
         <title>Sonya Trachsel - Front-End Developer</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/vendor/css/normalize.css">
         <link rel="stylesheet" href="/css/icons.css">
         <link rel="stylesheet" href="/css/base.css">
         <link rel="stylesheet" href="/css/layout.css">
-        <link relf="stylesheet" href="/css/modules.css"
+        <link rel="stylesheet" href="/css/modules.css">
         <link rel="stylesheet" href="/css/themes.css">
         <link rel="stylesheet" href="/css/fonts.css">
-        <link rel="stylesheet" href="/vendor/css/normalize.css">
     </head>
     <body>
       <div id="top" class="header">
@@ -58,7 +58,7 @@
               <b class="srt">Toggle</b>
             </span>
             <ul class="nav">
-              <li><a class="buttonResume" id="resume" href="">GET MY PDF RESUME</a></li>
+              <li><a class="buttonResume" id="resume" href="#">GET MY PDF RESUME</a></li>
             </ul>
           </nav> <!--Navigation class closing tag-->
         </div> <!--About me closing tag-->
@@ -87,7 +87,7 @@
 
         <footer>
           <p id="copyright">&copy; Sonya Trachsel 2016</p>
-            <li><a class="navButton smoothScroll" href="/" title="Go to top of page" data-ga-event>
+            <li><a class="navButton" href="/" title="Go to top of page" data-ga-event>
               BACK TO THE TOP
             </a></li>
         </footer>
@@ -99,6 +99,7 @@
         <script src="data/portfolioItems.json"></script>
         <script src="js/portfolio.js"></script>
         <script src="js/portfoliofilter.js"></script>
+        <script src="js/expandController.js"></script>
         <script id="portfolio-template" type="text/template">
           <div id="portfolio" class="project-item-layout columns-2">
             {{#each portfolio}}
@@ -107,16 +108,19 @@
                 <div class="hovertext">
                   <h3 id="title">{{title}}</h3>
                   <h4 class="category">{{category}}</h4>
-                  <div id="viewProject">
-                    <a class="navButton project-button" href>VIEW PROJECT</a>
+                  <div class="viewProject">
+                    <a href="#" class="navButton project-button" data-portfolio-id="{{id}}" data-control="userBtn">VIEW PROJECT</a>
                   </div>
                 </div>
               </div> <!--END ITEM-->
-              <div id="expanded" class="is-expanded">
-                <h3 id="title">{{title}}</h3>
-                <img id="portfolioImage" class="caption__media" class="imageSize" src="{{img}}">
-                <p id="description">{{description}}</p>
-                <div id="publishedOn">Created: {{publishedOn}}</div>
+              <div class="expanded expanded-{{id}}">
+                <div class="isExpanded">
+                  <h3 id="title">{{title}}</h3>
+                  <img id="portfolioImage" class="caption__media" class="imageSize" src="{{img}}">
+                  <p id="description">{{description}}</p>
+                  <div id="publishedOn">Created: {{publishedOn}}</div>
+                  <a href="#" class="close navButton">Close</a>
+                </div>
               </div>
             {{/each}}
           </div> <!--END PORTFOLIO-->
