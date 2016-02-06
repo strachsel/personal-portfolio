@@ -126,13 +126,15 @@
               </div> <!--END ITEM-->
               <div class="expanded expanded-{{id}}">
                 <div class="isExpanded">
-                  <h3 id="title">{{title}}</h3>
                   <img id="portfolioImage" class="caption__media" class="imageSize" src="{{img}}">
-                  <p id="description">{{description}}</p>
-                  <div id="publishedOn">Created: {{publishedOn}}</div>
-                  <a href="#" class="close navButton">Close</a>
-                </div>
-              </div>
+                  <div class="modaltext">
+                    <h3 id="title">{{title}}</h3>
+                    <p id="description">{{description}}</p>
+                    <p id="publishedOn">Created: {{publishedOn}}</p>
+                    <p><a href="#" class="close navButton">Close</a></p>
+                  </div> <!--END hovertext-->
+                </div> <!--END isExpanded-->
+              </div> <!--END expanded-->
             {{/each}}
           </div> <!--END PORTFOLIO-->
         </script>

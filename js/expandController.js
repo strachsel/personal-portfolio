@@ -36,6 +36,7 @@
         $('.expanded').hide();
         $('.expanded-'+ portfolioId).show('slow', function() {
         });
+        $('body').addClass('scrollprevent');
       });
 
   // update to .close class.  target close class
@@ -44,6 +45,7 @@
       // get specific project .expanded item.
         $('.expanded').hide('slow', function(){
         });
+        $('body').removeClass('scrollprevent');
       });
 
 
