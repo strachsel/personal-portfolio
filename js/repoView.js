@@ -6,7 +6,6 @@
     var $about = $('#about'); // Best practice: Cache the DOM query if it's used more than once.
 
     $about.find('ul').empty();
-    $about.show().siblings().hide();
   };
 
   // TODO: How do you want to render a single repo as html? Return your filled in HTML template.
@@ -20,7 +19,7 @@
     // The jQuery `append` method lets us append an entire array of HTML elements at once,
     // So we can use a little FP to transform our data-set into DOM nodes:
     $('#about ul').append(
-      repos.with('watchers_count').map(render)
+      repos.all.map(render)
     );
   };
 
