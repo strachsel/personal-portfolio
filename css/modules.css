@@ -151,8 +151,8 @@
 
 .isExpanded {
 	position: fixed;
-	width: 500px;
-	height: 500px;
+	width: 100%;
+	height: 100%;
   text-align: center;
   background:#fff;
   top: 50%;
@@ -163,6 +163,35 @@
   overflow: scroll;
 }
 
+.isExpanded img {
+	width: 100%;
+}
+
+.isExpanded h3 {
+	padding: 20px;
+}
+
+.expanded .isExpanded .modaltext {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.modaltext {
+	display:block;
+	padding: 30% 0 0 0;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.isExpanded .modaltext p {
+	color: #fff;
+}
 /* ABOUT ME */
 
 #profile-photo {
