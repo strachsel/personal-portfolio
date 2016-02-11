@@ -64,6 +64,23 @@
   }
 }
 
+/* REPO LAYOUT */
+
+.repoList ul {
+  display: inline-block;
+}
+
+.repoList ul li {
+  padding: 10px;
+  text-align: center;
+  vertical-align: middle;
+  float: left;
+  width: 100px;
+}
+
+#gitContainer {
+  margin: 100px;
+}
 
 /* RESPONSIVE WEB */
 
