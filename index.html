@@ -44,8 +44,8 @@
       <div id="content">
       </div> <!--Portfolio section closing tag-->
 
-      <div id="about">
-        <section>
+      <div id="about" class="repoList">
+        <section id="gitContainer">
           <h1>Check out my recent Project on GitHub:</h1>
           <ul>
             <li>Coding</li>
@@ -109,8 +109,8 @@
         <script src="vendor/js/page.js"></script>
         <script src="data/portfolioItems.json"></script>
         <script src="js/portfolio.js"></script>
-        <script src="js/portfoliofilter.js"></script>
-        <script src="js/expandController.js"></script>
+        <script src="js/portfolioFilter.js"></script>
+        <script src="js/expand.js"></script>
         <script id="portfolio-template" type="text/template">
           <div id="portfolio" class="project-item-layout">
             {{#each portfolio}}
@@ -138,7 +138,6 @@
             {{/each}}
           </div> <!--END PORTFOLIO-->
         </script>
-        <script src="js/githubToken.js"></script>
         <script src="controller/homeController.js"></script>
         <script src="controller/portfolioController.js"></script>
         <script src="controller/contactController.js"></script>
