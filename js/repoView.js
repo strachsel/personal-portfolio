@@ -14,14 +14,14 @@
   };
 
   // DONE: If all the data is loaded, we can prep the UI and render the repos.
-  repoView.index = function() {
-    ui();
-    // The jQuery `append` method lets us append an entire array of HTML elements at once,
-    // So we can use a little FP to transform our data-set into DOM nodes:
-    $('#about ul').append(
-      repos.all.map(render)
-    );
-  };
+  // repoView.index = function(render) {
+  //   ui();
+  //   // The jQuery `append` method lets us append an entire array of HTML elements at once,
+  //   // So we can use a little FP to transform our data-set into DOM nodes:
+  //   $('#about ul').append(
+  //     repos.all.map(render)
+  //   );
+  // };
 
   module.repoView = repoView;
 })(window);

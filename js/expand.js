@@ -28,28 +28,46 @@
 //     });
 
 //
-    $(document).on('click', '.viewProject a', function(e){
-        e.preventDefault();
+
+(function(module) {
+
+    var addItemViewHandlers = {};
+
+    addItemViewHandlers.init = function(){
+
+      $('#portfolio').on('click', '.viewProject a', function(e){
+          e.preventDefault();
+          // get specific project .expanded item.
+          // change from id of expanded to class.
+          var portfolioId = $(this).data('portfolio-id');
+
+          var raw_template = $('#portfolio-item-template').html();
+          // Complile that into an handlebars template
+          var template = Handlebars.compile(raw_template);
+
+          var item = window.portfolioData.filter(function(portfolioItem) {
+            return portfolioItem.id === portfolioId;
+          })[0];
+
+          var itemHtml = template(item);
+          $('#portfolio-expanded').append(itemHtml);
+
+          //$('.expanded').hide(); //Bryant removed
+          $('.expanded').show('slow');
+          $('body').addClass('scrollprevent');
+        });
+
+    // update to .close class.  target close class
+      $('#portfolio').on('click', '.expanded', function(e){
+          e.preventDefault();
         // get specific project .expanded item.
-        // change from id of expanded to class.
-        var portfolioId = $(this).data('portfolio-id');
-        $('.expanded').hide();
-        $('.expanded-'+ portfolioId).show('slow', function() {
+          $('.expanded').hide('slow', function() {
+            $('#portfolio-expanded').html('');
+          });
+
+          $('body').removeClass('scrollprevent');
         });
-        $('body').addClass('scrollprevent');
-      });
+    }; // end .initNewPortfolioPage
 
-  // update to .close class.  target close class
-    $(document).on('click', '.expanded', function(e){
-        e.preventDefault();
-      // get specific project .expanded item.
-        $('.expanded').hide('slow', function(){
-        });
-        $('body').removeClass('scrollprevent');
-      });
-
-
-  // add inline style
-  // hide everything when page loads, show once clicked
-  //$(this).data('name')
-  //data() documentation
+    module.addItemViewHandlers = addItemViewHandlers;
+  })(window);
