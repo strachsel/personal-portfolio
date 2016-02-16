@@ -25,8 +25,7 @@ $(function(){
     $('.project-item').map(function(){
       if ($(this).data('category') === 'ios'){
         $(this).css('display','inline-block');
-      }
-        else {
+      } else {
         $(this).css('display','none');
       }
     });

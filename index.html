@@ -41,11 +41,15 @@
         </ul>
       </nav>
 
+
       <div id="content">
+        <div id="portfolio" class="project-item-layout">
+          <div id="portfolio-expanded"></div>
+        </div> <!--END PORTFOLIO-->
       </div> <!--Portfolio section closing tag-->
 
-      <div id="about">
-        <section>
+      <div id="about" class="repoList">
+        <section id="gitContainer">
           <h1>Check out my recent Project on GitHub:</h1>
           <ul>
             <li>Coding</li>
@@ -109,36 +113,34 @@
         <script src="vendor/js/page.js"></script>
         <script src="data/portfolioItems.json"></script>
         <script src="js/portfolio.js"></script>
-        <script src="js/portfoliofilter.js"></script>
-        <script src="js/expandController.js"></script>
+        <script src="js/portfolioFilter.js"></script>
+        <script src="js/expand.js"></script>
         <script id="portfolio-template" type="text/template">
-          <div id="portfolio" class="project-item-layout">
-            {{#each portfolio}}
-              <div class="project-item" data-category="{{category}}">
-                <img id="portfolioImage" class="caption__media" class="imageSize" src="{{img}}">
-                <div class="hovertext">
-                  <h3 id="title">{{title}}</h3>
-                  <h4 class="category">{{category}}</h4>
-                  <div class="viewProject">
-                    <a href="#" class="navButton project-button" data-portfolio-id="{{id}}" data-control="userBtn">VIEW PROJECT</a>
-                  </div>
-                </div>
-              </div> <!--END ITEM-->
-              <div class="expanded expanded-{{id}}">
-                <div class="isExpanded">
-                  <img id="portfolioImage" class="caption__media" class="imageSize" src="{{img}}">
-                  <div class="modaltext">
-                    <h3 id="title">{{title}}</h3>
-                    <p id="description">{{description}}</p>
-                    <p id="publishedOn">Created: {{publishedOn}}</p>
-                    <p><a href="#" class="close navButton">Close</a></p>
-                  </div> <!--END hovertext-->
-                </div> <!--END isExpanded-->
-              </div> <!--END expanded-->
-            {{/each}}
-          </div> <!--END PORTFOLIO-->
+          <div class="project-item" data-category="{{category}}">
+            <img id="portfolioImage" class="caption__media" class="imageSize" src="{{img}}">
+            <div class="hovertext">
+              <h3 id="title">{{title}}</h3>
+              <h4 class="category">{{category}}</h4>
+              <div class="viewProject">
+                <a href="#" class="navButton project-button" data-portfolio-id="{{id}}" data-control="userBtn">VIEW PROJECT</a>
+              </div>
+            </div>
+          </div> <!--END ITEM-->
         </script>
-        <script src="js/githubToken.js"></script>
+
+        <script id="portfolio-item-template" type="text/template">
+          <div class="expanded expanded-{{id}}">
+            <div class="isExpanded">
+              <img id="portfolioImage" class="caption__media" class="imageSize" src="{{img}}">
+              <div class="modaltext">
+                <h3 id="title">{{title}}</h3>
+                <p id="description">{{description}}</p>
+                <p id="publishedOn">Created: {{publishedOn}}</p>
+                <p><a href="#" class="close navButton">Close</a></p>
+              </div> <!--END hovertext-->
+            </div> <!--END isExpanded-->
+          </div> <!--END expanded-->
+        </script>
         <script src="controller/homeController.js"></script>
         <script src="controller/portfolioController.js"></script>
         <script src="controller/contactController.js"></script>
