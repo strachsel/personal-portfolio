@@ -1,7 +1,7 @@
 [
     { "id": "project-1",
-      "title": "WedWeek",
-      "description": "WedWeek is the website for couples who want to get married",
+      "title": "The Screen Style Guide",
+      "description": "This is the style guide I've created for the web app called Screen - the web platform where users can access film festival information.",
       "publishedOn": "January 12th 2016",
       "category": "web",
       "img": "./img/img1.jpg"
