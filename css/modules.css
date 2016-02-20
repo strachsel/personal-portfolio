@@ -137,8 +137,128 @@
 
 
 /* PORTFOLIO MODAL WINDOW */
+.modalDialog {
+    background: rgba(41,39,42,.96);
+    position: fixed;
+		overflow-y: scroll;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #f3f3f3;
+    top: 0;
+    text-align: center;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99999;
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
 
-.project-item-layout .expanded {
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+}
+
+.modalDialog > div {
+    width: 90%;
+    top: 0;
+    left: 0;
+    position: relative;
+    margin: auto;
+    padding: 20px 40px 13px 20px;
+    background: #403f45;
+
+}
+
+.close {
+    color: #fff;
+    line-height: 25px;
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    text-align: center;
+    width: 24px;
+    text-decoration: none;
+    -moz-border-radius: 12px;
+    -moz-box-shadow: 1px 1px 3px #000;
+}
+
+.headline {
+    margin-bottom: 5rem;
+    position: relative;
+}
+.headline:after {
+    background-color: #fff;
+    bottom: -2.5rem;
+    content: "";
+    height: 1px;
+    left: 50%;
+    margin-left: -1.25rem;
+    position: absolute;
+    width: 2.5rem;
+}
+
+.position {
+  position: relative;
+    padding: 10px;
+}
+
+
+.close:hover { background: #00d9ff; }
+
+.screen-project {
+		width: 100%;
+		height: 100%;
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: cover;
+    align-items: center;
+    position: relative;
+}
+
+.screen-project:before {
+    background-color: rgba(41,39,42,.9);
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 0;
+}
+
+.modalDialog .screen-project img {
+	width: 100%;
+}
+
+
+.header-content {
+	position: absolute;
+	top: 100px;
+	left: 0;
+	padding: 100px;
+}
+
+.text {
+	text-align: left;
+	font-size: 1em;
+}
+
+/*Layout*/
+
+.showcase-half {
+    width: 50%;
+    float:left;
+    height: auto;
+}
+
+.showcase-full {
+    margin: 20px;
+    width: 60%;
+}
+/*.project-item-layout .expanded {
 	display: none;
 	position:fixed;
 	z-index: 10;
@@ -155,8 +275,8 @@
 	height: 100%;
   text-align: center;
   background:#fff;
-  top: 50%;
-	left: 50%;
+  top: %;
+	left: %;
 	transform: translate(-50%, -50%);
   background-color: #000;
   opacity: 1;

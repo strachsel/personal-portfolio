@@ -100,31 +100,44 @@
         <script src="data/portfolioItems.json"></script>
         <script src="js/portfolio.js"></script>
         <script src="js/portfolioFilter.js"></script>
-        <script src="js/expand.js"></script>
+        <!-- <script src="js/expand.js"></script> -->
         <script id="portfolio-template" type="text/template">
           <div id="portfolio" class="project-item-layout">
             {{#each portfolio}}
-              <div class="project-item" data-category="{{category}}">
+              <div class="project-item" data-type="{{type}}">
                 <img id="portfolioImage" class="caption__media" class="imageSize" src="{{img}}">
                 <div class="hovertext">
                   <h3 id="title">{{title}}</h3>
-                  <h4 class="category">{{category}}</h4>
+                  <h4 class="type">{{type}}</h4>
                   <div class="viewProject">
-                    <a href="#" class="navButton project-button" data-portfolio-id="{{id}}" data-control="userBtn">VIEW PROJECT</a>
+                    <a href="#openModal" class="navButton project-button" data-portfolio-id="{{id}}" data-control="userBtn">VIEW PROJECT</a>
                   </div>
                 </div>
               </div> <!--END ITEM-->
-              <div class="expanded expanded-{{id}}">
-                <div class="isExpanded">
-                  <img id="portfolioImage" class="caption__media" class="imageSize" src="{{img}}">
-                  <div class="modaltext">
-                    <h3 id="title">{{title}}</h3>
-                    <p id="description">{{description}}</p>
-                    <p id="publishedOn">Created: {{publishedOn}}</p>
-                    <p><a href="#" class="close navButton">Close</a></p>
-                  </div> <!--END hovertext-->
-                </div> <!--END isExpanded-->
-              </div> <!--END expanded-->
+              <div id="openModal" class="modalDialog modalDialog-{{id}}">
+                <div id="modal-content">
+                  <div id="project-header" class="screen-project">
+                    <img class="background-image" src="{{img0}}">
+                    <a href="#close" title="Close" class="close">X</a>
+                    <div class="header-content">
+                      <h1 id="project-title" class="position">{{title}}</h1>
+                      <p id="project-type" class="subheader headline">{{type}}</p>
+                      <p id="project-description" class="position text">{{description}}</p>
+                      <p id="project-details" class="text">
+                        <b class="position">Created: {{publishedOn}}</b>
+                        <br>
+                        <b class="position">My role: {{role}}</b>
+                        <br>
+                      </p>
+                    </div>
+                  </div> <!--END project-header-->
+                  <div id="project-images">
+                    <img alt class="showcase-half" src="{{img1}}">
+                    <img alt class="showcase-half" src="{{img2}}">
+                    <img alt class="showcase-full" src="{{img3}}">
+                  </div>
+              </div> <!--END modal-content-->
+            </div> <!--END openModal-->
             {{/each}}
           </div> <!--END PORTFOLIO-->
         </script>
@@ -132,9 +145,6 @@
         <script src="controller/portfolioController.js"></script>
         <script src="controller/contactController.js"></script>
         <script src="controller/aboutController.js"></script>
-        <script src="js/repo.js"></script>
-        <script src="js/repoView.js"></script>
-        <script src="controller/gitController.js"></script>
         <script src="js/routes.js"></script>
     </body>
 </html>

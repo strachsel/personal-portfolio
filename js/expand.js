@@ -28,23 +28,25 @@
 //     });
 
 //
+
+
     $(document).on('click', '.viewProject a', function(e){
         e.preventDefault();
         // get specific project .expanded item.
         // change from id of expanded to class.
-        var portfolioId = $(this).data('portfolio-id');
-        $('.expanded').hide();
-        $('.expanded-'+ portfolioId).show('slow', function() {
-        });
+        // var portfolioId = $(this).data('portfolio-id');
+        // $('.modalDialog').hide();
+        // $('.modalDialog-'+ portfolioId).show('slow', function() {
+        // });
         $('body').addClass('scrollprevent');
       });
 
   // update to .close class.  target close class
-    $(document).on('click', '.expanded', function(e){
+    $(document).on('click', '.modalDialog', function(e){
         e.preventDefault();
       // get specific project .expanded item.
-        $('.expanded').hide('slow', function(){
-        });
+        // $('.modalDialog').hide('slow', function(){
+        // });
         $('body').removeClass('scrollprevent');
       });
 

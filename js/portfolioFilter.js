@@ -11,7 +11,7 @@ $(function(){
   $('#webLink').on('click', function(e){
     e.preventDefault();
     $('.project-item').map(function(){
-      if ($(this).data('category') === 'web'){
+      if ($(this).data('type') === 'web'){
         $(this).css('display','inline-block');
       }
       else {
@@ -23,7 +23,7 @@ $(function(){
   $('#iosLink').on('click', function(e){
     e.preventDefault();
     $('.project-item').map(function(){
-      if ($(this).data('category') === 'ios'){
+      if ($(this).data('type') === 'ios'){
         $(this).css('display','inline-block');
       } else {
         $(this).css('display','none');
