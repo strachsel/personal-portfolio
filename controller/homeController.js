@@ -4,7 +4,6 @@
     $.smoothScroll({
       scrollTarget: '#top'
     });
-    repos.requestRepos(repoView.index);
   };
   module.homeController = homeController;
 })(window);

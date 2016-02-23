@@ -4,6 +4,7 @@ $(function(){
   // Complile that into an handlebars template
   var template = Handlebars.compile(raw_template);
   // Retrieve the placeHolder where the posts will be displayed
+  // Handlebars.registerPartial("project", $("#project-partial").html());
   var placeHolder = $('#content');
   // Fetch all portfolio items data from the server in JSON
   $.get('data/portfolioItems.json', function(data){
