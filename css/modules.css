@@ -1,150 +1,125 @@
 /* HEADER */
 
 .header {
-	margin: 10% auto;
-	max-width: 37.5rem;
-	padding: 7.5rem 1.25rem
+    margin: 10% auto;
+    max-width: 37.5rem;
+    padding: 7.5rem 1.25rem;
 }
-
 .imageSize {
-	width: 100%;
-	height: auto;
+    width: 100%;
+    height: auto;
 }
-
 /* PORTFOLIO */
-
 /* PORTFOLIO HOVER EFFECT */
 
 .project-item {
-	position: relative;
-	overflow: hidden;
-	min-width: 320px;
-	max-width: 480px;
-	max-height: 440px;
-	/*width: 48%;*/
-	height: auto;
-	background: #;
-	text-align: center;
-	cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    min-width: 320px;
+    max-width: 500px;
+    max-height: 500px;
+    height: auto;
+    background: #;
+    text-align: center;
+    cursor: pointer;
 }
-
 .project-item img {
-	position: relative;
-	display: block;
-	min-height: 100%;
-	max-width: 100%;
-	opacity: 0.8;
+    position: relative;
+    display: block;
+    min-height: 500px;
 }
-
 .project-item h3 {
-	opacity: 1;
-	-webkit-transform: scale3d(0.8,0.8,1);
-	transform: scale3d(0.8,0.8,1);
-	padding-top: 40%;
-	-webkit-transition: -webkit-transform 0.35s;
-	transition: transform 0.35s;
+    opacity: 1;
+    -webkit-transform: scale3d(0.8, 0.8, 1);
+    transform: scale3d(0.8, 0.8, 1);
+    padding-top: 40%;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    word-spacing: -0.15em;
+    font-weight: 800;
+    margin: 0;
 }
+.project-item:hover img {
+    /* Add the zoom effect to the image when hover */
 
-.project-item p {
-	padding: 0.5em 2em;
-	text-transform: none;
-	font-size: 0.85em;
-	opacity: 0;
-	letter-spacing: 1px;
-	font-size: 68.5%;
+    opacity: 0.2;
+    width: 500px;
+    height: 500px;
+    -webkit-transform: scale3d(1.05, 1.05, 1);
+    transform: scale3d(1.05, 1.05, 1);
 }
-
-.project-item h3,
-.project-item a {
-	word-spacing: -0.15em;
-	font-weight: 800;
-	margin: 0;
+.project-item:hover h3 {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
 }
-
-.project-item:hover img { /* Add the zoom effect to the image when hover */
-	opacity: 0.7;
-	-webkit-transform: scale3d(1.05,1.05,1);
-	transform: scale3d(1.05,1.05,1);
-}
-
-.project-item:hover h3
- {
-	opacity: 1;
-	-webkit-transform: scale3d(1,1,1);
-	transform: scale3d(1,1,1);
-}
-
 .hovertext {
-	display:block;
-	padding: ;
-	color: #fff;
-	text-transform: uppercase;
-	font-size: 1.25em;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
+    display: block;
+    padding: ;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
+.hovertext::after {
+    /*Add the lines to the hover*/
 
-.hovertext::after { /* Add the lines to the hover */
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	border-top: 1px solid #fff;
-	border-bottom: 1px solid #fff;
-	content: '';
-	opacity: 0;
-	-webkit-transform: rotate3d(0,0,1,45deg) scale3d(1,0,1);
-	transform: rotate3d(0,0,1,45deg) scale3d(1,0,1);
-	-webkit-transform-origin: 50% 50%;
-	transform-origin: 50% 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    content: '';
+    opacity: 0;
+    -webkit-transform: rotate3d(0, 0, 1, 45deg) scale3d(1, 0, 1);
+    transform: rotate3d(0, 0, 1, 45deg) scale3d(1, 0, 1);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
 }
+.hovertext::after,
+/* Add the smooth effect to the hover*/
 
-.hovertext::after, /* Add the smooth effect to the hover */
 .project-item img {
-	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-	transition: opacity 0.35s, transform 0.35s;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
 }
-
 .hovertext::before,
 .hovertext::after {
-	pointer-events: none;
+    pointer-events: none;
 }
-
 .project-item:hover .hovertext::after {
-	opacity: 1;
-	-webkit-transform: rotate3d(0,0,1,45deg) scale3d(1,1,1);
-	transform: rotate3d(0,0,1,45deg) scale3d(1,1,1);
+    opacity: 1;
+    -webkit-transform: rotate3d(0, 0, 1, 45deg) scale3d(1, 1, 1);
+    transform: rotate3d(0, 0, 1, 45deg) scale3d(1, 1, 1);
 }
-
 .project-item-layout .project-item .hovertext,
 .project-item-layout .project-item .hovertext > a {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
-
-.project-item-layout .project-item .hovertext > a { /* HIDES THE "VIEW PROJECT"*/
-	z-index: 1000; /* TODO: How to show when Hover?? */
-	text-indent: 200%;
-	white-space: nowrap;
-	font-size: 0;
-	opacity: 0;
+.project-item-layout .project-item .hovertext > a {
+    z-index: 1000;
+    text-indent: 200%;
+    white-space: nowrap;
+    font-size: 0;
+    opacity: 0;
 }
-
-
-
 /* PORTFOLIO MODAL WINDOW */
 
 .project-item-layout .modalDialog {
-	display: none;
+    display: none;
 }
 .modalDialog {
-    background: rgba(41,39,42,.96);
+    background: rgba(41, 39, 42, .96);
+    overflow: auto;
     position: fixed;
-		overflow-y: scroll;
+    overflow-y: scroll;
     font-family: Arial, Helvetica, sans-serif;
     color: #f3f3f3;
     top: 0;
@@ -159,12 +134,10 @@
     transition: opacity 400ms ease-in;*/
     /*pointer-events: none;*/
 }
-
 .modalDialog:target {
-	opacity:1;
-	pointer-events: auto;
+    opacity: 1;
+    pointer-events: auto;
 }
-
 .modalDialog > div {
     width: 90%;
     top: 0;
@@ -173,9 +146,7 @@
     margin: auto;
     padding: 20px 40px 13px 20px;
     background: #403f45;
-
 }
-
 .close {
     color: #fff;
     line-height: 25px;
@@ -188,7 +159,6 @@
     -moz-border-radius: 12px;
     -moz-box-shadow: 1px 1px 3px #000;
 }
-
 .headline {
     margin-bottom: 5rem;
     position: relative;
@@ -203,27 +173,24 @@
     position: absolute;
     width: 2.5rem;
 }
-
 .position {
-  position: relative;
+    position: relative;
     padding: 10px;
 }
-
-
-.close:hover { background: #00d9ff; }
-
+.close:hover {
+    background: #00d9ff;
+}
 .project-header {
-		width: 100%;
-		height: 100%;
+    width: 100%;
+    height: 100%;
     background-repeat: no-repeat;
     background-position: right top;
     background-size: cover;
     align-items: center;
     position: relative;
 }
-
 .project-header:before {
-    background-color: rgba(41,39,42,.9);
+    background-color: rgba(41, 39, 42, .9);
     bottom: 0;
     content: "";
     left: 0;
@@ -233,31 +200,35 @@
     z-index: 0;
 }
 
+.portfolio-project {
+    background-color: rgba(41,39,42,.9);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: cover;
+    padding: 100px;
+    align-items: center;
+    position: relative;
+}
 .modalDialog .project-header img {
-	width: 100%;
+    width: 100%;
 }
-
-
 .header-content {
-	position: absolute;
-	top: 100px;
-	left: 0;
-	padding: 100px;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    padding: 100px;
 }
-
 .text {
-	text-align: left;
-	font-size: 1em;
+    text-align: left;
+    font-size: 1em;
 }
-
 /*Layout*/
 
 .showcase-half {
     width: 50%;
-    float:left;
+    float: left;
     height: auto;
 }
-
 .showcase-full {
     margin: 20px;
     width: 60%;
@@ -319,54 +290,47 @@
 /* ABOUT ME */
 
 #profile-photo {
-	display: block;
-	max-width: 200px;
-	margin: 0 auto 30px;
-	border-radius: 20px;
-	margin-bottom: 70px;
+    display: block;
+    max-width: 200px;
+    margin: 0 auto 30px;
+    border-radius: 20px;
+    margin-bottom: 70px;
 }
-
 #about-me {
-	position: ;
-	z-index: 4;
+    position: ;
+    z-index: 4;
     padding: 100px;
     background-color: #fff;
 }
-
 #profileDescription {
-	font-weight: 300;
-	font-size: 1.2em;
-  color: #989898;
+    font-weight: 300;
+    font-size: 1.2em;
+    color: #989898;
 }
-
 .headline {
-	margin-bottom: 5rem;
-	position: relative;
+    margin-bottom: 5rem;
+    position: relative;
 }
 .headline:after {
-	background-color: #fff;
-	bottom: -2.5rem;
-	content: "";
-	height: 1px;
-	left: 50%;
-	margin-left: -1.25rem;
-	position: absolute;
-	width: 2.5rem;
+    background-color: #fff;
+    bottom: -2.5rem;
+    content: "";
+    height: 1px;
+    left: 50%;
+    margin-left: -1.25rem;
+    position: absolute;
+    width: 2.5rem;
 }
-
 /* CONNECT */
 
 #connect {
-  padding: 100px;
+    padding: 100px;
 }
-
-
-
 /* FOOTER */
 
 #copyright {
-  padding: 0;
-  font-family: sans-serif;
-  font-style: italic;
-  font-size: 12px;
+    padding: 0;
+    font-family: sans-serif;
+    font-style: italic;
+    font-size: 12px;
 }
