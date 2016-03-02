@@ -129,6 +129,7 @@
         <div id="portfolio" class="project-item-layout">
             {{#each portfolio}}
             <div class="project-item" data-type="{{type}}">
+              <div class="work-link">
                 <img class="portfolioImage" class="caption__media" class="imageSize" src="{{img}}">
                 <div class="hovertext">
                     <h3 class="title">{{title}}</h3>
@@ -137,6 +138,7 @@
                         <a href="#" class="navButton project-button" data-portfolio-id="{{id}}" data-control="userBtn">VIEW PROJECT</a>
                     </div>
                 </div>
+              </div>
             </div>
             <!--END ITEM-->
             <div class="modalDialog modalDialog-{{id}}">
@@ -153,6 +155,7 @@
                                 <br>
                                 <b class="position">My role: {{role}}</b>
                                 <br>
+                                <a class="navButton project-button" href="{{link}}" class="position">Check it out</a>
                             </p>
                         </div>
                     </div>

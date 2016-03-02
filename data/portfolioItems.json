@@ -1,7 +1,7 @@
 [
     { "id": "project-1",
       "type": "web",
-      "title": "The Screen Style Guide",
+      "title": "Screen Style Guide",
       "description": "This is the style guide I've created for the web app called Screen - the web platform where users can access film festival information.",
       "publishedOn": "January 12th 2016",
       "role": "Front-End Developer",
@@ -9,19 +9,21 @@
       "img0": "./img/screen/screen.jpg",
       "img1": "./img/screen/logo.jpg",
       "img2": "./img/screen/styleguide.jpg",
-      "img3": "./img/screen/mac.png"
+      "img3": "./img/screen/mac.png",
+      "link": "https://strachsel-pair.herokuapp.com"
     },
     { "id": "project-2",
       "type": "web",
-      "title": "The Screen Web Application",
-      "description": "This is the style guide I've created for the web app called Screen - the web platform where users can access film festival information.",
-      "publishedOn": "January 12th 2016",
+      "title": "Screen Web Application",
+      "description": "Screen is written in client-side JavaScript and SQL, and is designed to serve as a companion schedule application to independent film festivals. Filter a festival schedule on multiple criteria, watch trailers, and create a custom schedule of interesting films. Integrates with the Open Movie Database API and Twitter to display ratings and tweet reviews quickly.",
+      "publishedOn": "February 27th 2016",
       "role": "Front-End Developer",
       "img": "/img/screenapp/screenmac.png",
       "img0": "./img/screenapp/screenmac.png",
       "img1": "./img/screen/logo.jpg",
       "img2": "./img/screen/styleguide.jpg",
-      "img3": "./img/screen/mac.png"
+      "img3": "./img/screen/mac.png",
+      "link": "https://screen-portland.herokuapp.com/"
     },
     { "id": "project-3",
       "type": "web",
@@ -33,18 +35,20 @@
       "img0": "./img/screen/screen.jpg",
       "img1": "./img/screen/logo.jpg",
       "img2": "./img/screen/styleguide.jpg",
-      "img3": "./img/screen/mac.png"
+      "img3": "./img/screen/mac.png",
+      "link": "http://portfolio-strachsel.herokuapp.com/"
     },
     { "id": "project-4",
       "type": "web",
-      "title": "The Screen Style Guide",
-      "description": "This is the style guide I've created for the web app called Screen - the web platform where users can access film festival information.",
+      "title": "More projects to come",
+      "description": "This is where there will be more projects.",
       "publishedOn": "January 12th 2016",
       "role": "Front-End Developer",
-      "img": "/img/screen/front.png",
+      "img": "/img/future/question.png",
       "img0": "./img/screen/screen.jpg",
       "img1": "./img/screen/logo.jpg",
       "img2": "./img/screen/styleguide.jpg",
-      "img3": "./img/screen/mac.png"
+      "img3": "./img/screen/mac.png",
+      "link": "http://portfolio-strachsel.herokuapp.com/"
     }
   ]
